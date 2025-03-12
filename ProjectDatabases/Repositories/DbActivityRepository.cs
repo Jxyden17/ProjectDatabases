@@ -1,7 +1,7 @@
-﻿using MvcWhatsUp.Models;
+﻿using ProjectDatabases.Models;
 using Microsoft.Data.SqlClient;
 
-namespace MvcWhatsUp.Repositories
+namespace ProjectDatabases.Repositories
 {
     public class DbUserRepository : IUserRepository
     {
