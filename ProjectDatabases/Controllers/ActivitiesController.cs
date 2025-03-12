@@ -4,11 +4,11 @@ using ProjectDatabases.Repositories;
 
 namespace ProjectDatabases.Controllers
 {
-    public class UserController : Controller
+    public class ActivitiesController : Controller
     {
         private readonly IActivityRepository _activityRepository;
         
-        public UserController(IActivityRepository activitiesRepository) 
+        public ActivitiesController(IActivityRepository activitiesRepository) 
         {
             _activityRepository = activitiesRepository;
         }
