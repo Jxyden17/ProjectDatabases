@@ -8,6 +8,7 @@ namespace ProjectDatabases
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddSingleton<IUserRepository, DbUserRepository>();
 
             var app = builder.Build();
 
