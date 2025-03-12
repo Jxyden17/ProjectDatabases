@@ -6,7 +6,7 @@
 <div class="container">
     <h1>@ViewData["Title"]</h1>
     <p>Number of activities in the list: @Model.Count</p>
-    <table class="table">
+    <table class="table table-hover">
         <thead>
             <tr>
                 <th>Name</th>
@@ -25,8 +25,8 @@
                         <td>@activity.EndTime</td>
                         <td>
                             <div class="btn-group">
-                                <a href="/Users/Edit/@activity.ActivityId" class="btn btn-outline-warning">Edit</a>
-                                <a href="/Users/Delete/@activity.ActivityId" class="btn btn-outline-danger">Delete</a>
+                                <a href="/Activities/Edit/@activity.ActivityId" class="btn btn-outline-warning">Edit</a>
+                                <a href="/Activities/Delete/@activity.ActivityId" class="btn btn-outline-danger">Delete</a>
                             </div>
                         </td>
                     </tr>
@@ -34,4 +34,5 @@
             }
         </tbody>
     </table>
+    <a href="/Activities/Create">Create an activity</a>
 </div>
