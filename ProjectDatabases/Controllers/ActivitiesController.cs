@@ -15,7 +15,9 @@ namespace ProjectDatabases.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            // Get all activities via repository
+            List<Activity> activities = _activityRepository.GetAll();
+            return View(activities);
         }
 
         public IActionResult Login()

@@ -1,6 +1,37 @@
-﻿@{
+﻿@model List<ProjectDatabases.Models.Activity>
+
+@{
     ViewData["Title"] = "Activities";
 }
 <div class="container">
     <h1>@ViewData["Title"]</h1>
+    <p>Number of activities in the list: @Model.Count</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (Activity activity in Model)
+                {
+                    <tr>
+                        <td title="@activity.ActivityName">@activity.ActivityName</td>
+                        <td>@activity.StartTime</td>
+                        <td>@activity.EndTime</td>
+                        <td>
+                            <div class="btn-group">
+                                <a href="/Users/Edit/@activity.ActivityId" class="btn btn-outline-warning">Edit</a>
+                                <a href="/Users/Delete/@activity.ActivityId" class="btn btn-outline-danger">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
 </div>
