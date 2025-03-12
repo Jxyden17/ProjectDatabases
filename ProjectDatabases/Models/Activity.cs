@@ -1,6 +1,6 @@
 ﻿
 
-namespace MvcWhatsUp.Models
+namespace ProjectDatabases.Models
 {
     public class Activity
     {
