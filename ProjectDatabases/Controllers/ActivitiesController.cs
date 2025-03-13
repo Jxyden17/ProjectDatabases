@@ -100,7 +100,7 @@ namespace ProjectDatabases.Controllers
                 // Go back to activity list (via Index)
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception ex)
             {
                 // Something is wrong, go back to view with activity
                 return View(activity);
