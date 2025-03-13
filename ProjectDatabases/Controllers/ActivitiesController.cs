@@ -43,12 +43,43 @@ namespace ProjectDatabases.Controllers
                 // Update Activity via repository
                 _activitiesRepository.Update(activity);
 
-                // Go back to users list (via Index)
+                // Go back to activity list (via Index)
                 return RedirectToAction("Index");
             }
             catch
             {
                 // Soemthing's wrong, go back to view with user
+                return View(activity);
+            }
+        }
+
+        [HttpGet]
+        public IActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            // Get activity via repository
+            Activity? activity = _activitiesRepository.GetById((int)id);
+            return View(activity);
+        }
+
+        [HttpPost]
+        public IActionResult Delete(Activity activity)
+        {
+            try
+            {
+                // Delete activity via repository
+                _activitiesRepository.Delete(activity);
+
+                // Go back to activity list (via Index)
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                // Something is wrong, go back to view with activity
                 return View(activity);
             }
         }
