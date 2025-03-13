@@ -21,6 +21,29 @@ namespace ProjectDatabases.Controllers
         }
 
         [HttpGet]
+        public IActionResult Create()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Activity activity)
+        {
+            try
+            {
+                // Add activity via repository
+                _activitiesRepository.Add(activity);
+
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                // Something goes wrong, go back to view
+                return View(activity);
+            }
+        }
+
+        [HttpGet]
         // Make sure the parameter is called id in the method!
         // It references app.MapControllerRoute(); in program.cs
         public IActionResult Edit(int? id)

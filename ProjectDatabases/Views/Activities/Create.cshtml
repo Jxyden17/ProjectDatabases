@@ -1,0 +1,26 @@
+﻿@model ProjectDatabases.Models.Activity
+
+@{
+    ViewData["Title"] = "Create Activity";
+}
+
+<h1>@ViewData["Title"]</h1>
+<form action="/Activities/Create" method="POST">
+    <div class="form-group py-2">
+        <label for="activityname">Name:</label>
+        <input type="text" id="activityname" name="activityname" class="form-control" required value="@Model?.ActivityName" />
+    </div>
+
+    <div class="form-group py-2">
+        <label for="starttime">Start Time:</label>
+        <input type="datetime-local" id="starttime" name="starttime" class="form-control" required value="@Model?.ConvertSqlToHtmlDateTime(Model.StartTime)" />
+    </div>
+
+    <div class="form-group py-2">
+        <label for="endtime">End Time:</label>
+        <input type="datetime-local" id="endtime" name="endtime" class="form-control" required value="@Model?.ConvertSqlToHtmlDateTime(Model.EndTime)" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
+<a href="/Activities/Index">Back to Activity list</a>
