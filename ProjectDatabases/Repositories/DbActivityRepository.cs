@@ -18,8 +18,8 @@ namespace ProjectDatabases.Repositories
             // Retrieve data from fields
             int activityId = (int)reader["activity_id"];
             string activityName = (string)reader["name"];
-            DateTime startTime = (DateTime)reader["start_time"];
-            DateTime endTime = (DateTime)reader["end_time"];
+            DateTime startTime = reader.GetDateTime(reader.GetOrdinal("start_time"));
+            DateTime endTime = reader.GetDateTime(reader.GetOrdinal("end_time"));
 
             // Return new Acivity object
             return new Activity(activityId, activityName, startTime, endTime);

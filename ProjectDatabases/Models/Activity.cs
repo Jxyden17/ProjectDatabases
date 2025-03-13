@@ -4,6 +4,7 @@ namespace ProjectDatabases.Models
 {
     public class Activity
     {
+        // Properties
         public int ActivityId { get; set; }
         public string ActivityName { get; set; }
         public DateTime StartTime { get; set; }
@@ -14,12 +15,21 @@ namespace ProjectDatabases.Models
         {
 
         }
+
+        // Constructor
         public Activity(int activityId, string activityName, DateTime startTime, DateTime endTime)
         {
             ActivityId = activityId;
             ActivityName = activityName;
             StartTime = startTime;
             EndTime = endTime;
+        }
+
+        // Other methods
+        // Returns the DateTime in the datetime-local format that HTML uses
+        public string ConvertSqlToHtmlDateTime(DateTime dateTime)
+        {
+            return dateTime.ToString("yyyy-MM-ddTHH:mm");
         }
     }
 }
