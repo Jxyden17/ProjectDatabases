@@ -1,5 +1,27 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model ProjectDatabases.Models.Activity
+
 @{
+    ViewData["Title"] = "Edit Activity";
 }
+<h1>@ViewData["Title"]</h1>
+<form action="/Activities/Edit" method="POST">
+    <input hidden type="number" name="activityid" value="@Model?.ActivityId" />
+
+    <div class="form-group py-2">
+        <label for="activityname">Name:</label>
+        <input type="text" id="activityname" name="activityname" class="form-control" required value="@Model?.ActivityName" />
+    </div>
+
+    <div class="form-group py-2">
+        <label for="starttime">Start Time:</label>
+        <input type="datetime" id="starttime" name="starttime" class="form-control" required value="@Model?.StartTime" />
+    </div>
+
+    <div class="form-group py-2">
+        <label for="endtime">End Time:</label>
+        <input type="datetime" id="endtime" name="endtime" class="form-control" required value="@Model?.EndTime" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+<a href="/Activities/Index">Back to Activities list</a>

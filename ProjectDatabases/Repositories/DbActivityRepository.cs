@@ -52,9 +52,33 @@ namespace ProjectDatabases.Repositories
             return activities;
         }
 
-        public Activity? GetById(int ActivityId)
+        public Activity? GetById(int activityId)
         {
-            throw new NotImplementedException();
+            Activity activity = new Activity();
+
+            // 1. Create an SQL connection with a connection string
+            using (SqlConnection connection = new(_connectionString))
+            {
+                // 2. Create an SQL command with a query
+                string query = "SELECT activity_id, name, start_time, end_time FROM ACTIVITY WHERE activity_id = @ActivityId";
+                SqlCommand command = new(query, connection);
+                
+                // Prevent SQL injection
+                command.Parameters.AddWithValue("@ActivityId", activityId);
+
+                // 3. Open the SQL connection
+                command.Connection.Open();
+
+                // 4. Execute SQL command
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
+                {
+                    activity = ReadActivity(reader);
+                }
+                reader.Close();
+            }
+            return activity;
         }
 
         public void Add(Activity activity)

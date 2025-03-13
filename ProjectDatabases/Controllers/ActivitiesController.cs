@@ -6,23 +6,51 @@ namespace ProjectDatabases.Controllers
 {
     public class ActivitiesController : Controller
     {
-        private readonly IActivityRepository _activityRepository;
+        private readonly IActivityRepository _activitiesRepository;
         
         public ActivitiesController(IActivityRepository activitiesRepository) 
         {
-            _activityRepository = activitiesRepository;
+            _activitiesRepository = activitiesRepository;
         }
 
         public IActionResult Index()
         {
             // Get all activities via repository
-            List<Activity> activities = _activityRepository.GetAll();
+            List<Activity> activities = _activitiesRepository.GetAll();
             return View(activities);
         }
 
-        public IActionResult Login()
+        [HttpGet]
+        // Make sure the parameter is called id in the method!
+        // It references app.MapControllerRoute(); in program.cs
+        public IActionResult Edit(int? id)
         {
-            return View();
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            // Get Activity via repository
+            Activity? activity = _activitiesRepository.GetById((int)id);
+            return View(activity);
+        }
+
+        [HttpPost]
+        public IActionResult Edit(Activity activity)
+        {
+            try
+            {
+                // Update Activity via repository
+                _activitiesRepository.Update(activity);
+
+                // Go back to users list (via Index)
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                // Soemthing's wrong, go back to view with user
+                return View(activity);
+            }
         }
     }
 }
