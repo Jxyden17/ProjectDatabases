@@ -6,10 +6,14 @@
 <div class="container">
     <h1>@ViewData["Title"]</h1>
     <p>Number of activities in the list: @Model.Count</p>
+    <form class="row" action="/Activities/Index" method="GET">
+        <input class="form-control col" type="search" id="search" name="search" placeholder="Search for an activity..." aria-label="Search for an activity" />
+        <button class="btn btn-outline-success col-auto mx-2" type="submit">Search</button>
+    </form>
     <table class="table table-hover">
         <thead>
             <tr>
-                <th>Name</th>
+                <th>Activity Name</th>
                 <th>Start Time</th>
                 <th>End Time</th>
                 <th>Actions</th>

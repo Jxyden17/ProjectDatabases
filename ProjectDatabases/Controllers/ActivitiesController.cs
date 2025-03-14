@@ -13,11 +13,21 @@ namespace ProjectDatabases.Controllers
             _activitiesRepository = activitiesRepository;
         }
 
-        public IActionResult Index()
+        // No search results
+        public IActionResult Index(string search)
         {
-            // Get all activities via repository
-            List<Activity> activities = _activitiesRepository.GetAll();
-            return View(activities);
+            if (string.IsNullOrEmpty(search))
+            {
+                // Get all activities via repository
+                List<Activity> allActivities = _activitiesRepository.GetAll();
+                return View(allActivities);
+            }
+            else
+            {
+                // Get filtered activites via repository
+                List<Activity>? filteredActivities = _activitiesRepository.Search(search);
+                return View(filteredActivities);
+            }       
         }
 
         [HttpGet]

@@ -52,9 +52,39 @@ namespace ProjectDatabases.Repositories
             return activities;
         }
 
+        public List<Activity> Search(string inputSearch)
+        {
+            List<Activity> activities = new();
+
+            //1. Create an SQL connection with a connection string
+            using (SqlConnection connection = new(_connectionString))
+            {
+                // 2. Create an SQL command with a query
+                string query = "SELECT activity_id, [name], start_time, end_time FROM Activity WHERE [name] LIKE @InputSearch ORDER BY start_time ASC";
+                SqlCommand command = new(query, connection);
+
+                // Add parameters to prevent SQL injection
+                command.Parameters.AddWithValue("@InputSearch", $"%{inputSearch}%");
+
+                // 3. Open the SQL connection
+                command.Connection.Open();
+
+                // 4. Execute SQL command
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Activity activity = ReadActivity(reader);
+                    activities.Add(activity);
+                }
+                reader.Close();
+            }
+            return activities;
+        }
+
         public Activity? GetById(int activityId)
         {
-            Activity activity = new Activity();
+            Activity activity = new();
 
             // 1. Create an SQL connection with a connection string
             using (SqlConnection connection = new(_connectionString))
