@@ -1,0 +1,33 @@
+﻿@model List<ProjectDatabases.Models.Room>
+
+@{
+	ViewData["Title"] = "Rooms";
+}
+
+<div class="text-center">
+	<h1 class="display-4">Rooms</h1>
+</div>
+<a href="/Rooms/Create"> Create New</a>
+<table class="table table-dark">
+	<thead>
+		<tr>
+			<th>Room_number</th>
+			<th>Name</th>
+			<th>Capacity</th>
+			<th>Building</th>
+		</tr>
+	</thead>
+	<tbody>
+		@{
+			foreach (var room in Model)
+			{
+				<tr>
+					<td>@room.Room_number</td>
+					<td>@room.Name</td>
+					<td>@room.Capacity</td>
+					<td>@room.Building</td>
+				</tr>
+			}
+		}
+	</tbody>
+</table>

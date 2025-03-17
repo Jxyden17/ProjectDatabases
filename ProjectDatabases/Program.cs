@@ -1,3 +1,6 @@
+using ProjectDatabases.Repositories;
+using SomerenMVC.Repositories;
+
 namespace ProjectDatabases
 {
     public class Program
@@ -9,6 +12,7 @@ namespace ProjectDatabases
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddSingleton<IUserRepository, DbUserRepository>();
+            builder.Services.AddSingleton<IRoomsRepository, DbRoomsRepository>();
 
             var app = builder.Build();
 

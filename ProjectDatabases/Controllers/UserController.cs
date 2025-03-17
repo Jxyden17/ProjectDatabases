@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using MvcWhatsUp.Models;
-using MvcWhatsUp.Repositories;
+using SomerenMVC.Models;
+using SomerenMVC.Repositories;
 
-namespace MvcWhatsUp.Controllers
+namespace SomerenMVC.Controllers
 {
     public class UserController : Controller
     {

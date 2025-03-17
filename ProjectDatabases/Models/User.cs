@@ -1,6 +1,6 @@
 ﻿
 
-namespace MvcWhatsUp.Models
+namespace SomerenMVC.Models
 {
     public class User
     {

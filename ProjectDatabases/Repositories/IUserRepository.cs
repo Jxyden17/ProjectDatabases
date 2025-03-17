@@ -1,6 +1,6 @@
-﻿using MvcWhatsUp.Models;
+﻿using SomerenMVC.Models;
 
-namespace MvcWhatsUp.Repositories
+namespace SomerenMVC.Repositories
 {
     public interface IUserRepository
     {

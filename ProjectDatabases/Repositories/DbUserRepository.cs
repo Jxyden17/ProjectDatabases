@@ -1,7 +1,7 @@
-﻿using MvcWhatsUp.Models;
+﻿using SomerenMVC.Models;
 using Microsoft.Data.SqlClient;
 
-namespace MvcWhatsUp.Repositories
+namespace SomerenMVC.Repositories
 {
     public class DbUserRepository : IUserRepository
     {
