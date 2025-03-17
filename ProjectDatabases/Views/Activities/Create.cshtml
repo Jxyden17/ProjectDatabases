@@ -23,12 +23,5 @@
 
     <button type="submit" class="btn btn-primary">Add</button>
 </form>
-@* Error message *@
-@if (TempData["ErrorMessage"] != null)
-{
-    <div class="alert alert-danger">
-        <h2>An error occured!</h2>
-        @TempData["ErrorMessage"]
-    </div>
-}
+@Html.Partial("_ErrorAlert")
 <a href="/Activities/Index">Back to Activity list</a>

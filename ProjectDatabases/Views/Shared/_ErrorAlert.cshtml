@@ -1,0 +1,11 @@
+﻿@*
+This is a partial view.
+It is an inline alert pop-up that you can use in other views
+*@
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        <h2>An error occured!</h2>
+        @TempData["ErrorMessage"]
+    </div>
+}
