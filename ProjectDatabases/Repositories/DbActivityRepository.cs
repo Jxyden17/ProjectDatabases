@@ -33,7 +33,9 @@ namespace ProjectDatabases.Repositories
             using (SqlConnection connection = new(_connectionString))
             {
                 // 2. Create an SQL command with a query
-                string query = "SELECT activity_id, [name], start_time, end_time FROM Activity ORDER BY start_time ASC";
+                string query = @"SELECT activity_id, [name], start_time, end_time
+                                 FROM Activity
+                                 ORDER BY start_time ASC;";
                 SqlCommand command = new(query, connection);
 
                 // 3. Open the SQL connection
@@ -60,7 +62,10 @@ namespace ProjectDatabases.Repositories
             using (SqlConnection connection = new(_connectionString))
             {
                 // 2. Create an SQL command with a query
-                string query = "SELECT activity_id, [name], start_time, end_time FROM Activity WHERE [name] LIKE @InputSearch ORDER BY start_time ASC";
+                string query = @"SELECT activity_id, [name], start_time, end_time
+                                 FROM Activity
+                                 WHERE [name] LIKE @InputSearch
+                                 ORDER BY start_time ASC;";
                 SqlCommand command = new(query, connection);
 
                 // Add parameters to prevent SQL injection
@@ -90,9 +95,11 @@ namespace ProjectDatabases.Repositories
             using (SqlConnection connection = new(_connectionString))
             {
                 // 2. Create an SQL command with a query
-                string query = "SELECT activity_id, [name], start_time, end_time FROM Activity WHERE activity_id = @ActivityId";
+                string query = @"SELECT activity_id, [name], start_time, end_time
+                               FROM Activity
+                               WHERE activity_id = @ActivityId;";
                 SqlCommand command = new(query, connection);
-                
+
                 // Add parameters to prevent SQL injection
                 command.Parameters.AddWithValue("@ActivityId", activityId);
 
@@ -117,8 +124,8 @@ namespace ProjectDatabases.Repositories
             using (SqlConnection connection = new(_connectionString))
             {
                 //2. Create an SQL command with a query
-                string query = "INSERT INTO Activity ([name], start_time, end_time) VALUES (@ActivityName, @StartTime, @EndTime);"
-                    + "SELECT SCOPE_IDENTITY()";
+                string query = @"INSERT INTO Activity ([name], start_time, end_time) VALUES (@ActivityName, @StartTime, @EndTime);
+                                 SELECT SCOPE_IDENTITY();";
                 SqlCommand command = new(query, connection);
 
                 // Add parameters to prevent SQL injection
@@ -140,7 +147,8 @@ namespace ProjectDatabases.Repositories
             using (SqlConnection connection = new(_connectionString))
             {
                 // 2. Create an SQL command with a query
-                string query = "UPDATE Activity SET [name] = @ActivityName, start_time = @StartTime, end_time = @EndTime WHERE activity_id = @ActivityId";
+                string query = @"UPDATE Activity SET [name] = @ActivityName, start_time = @StartTime, end_time = @EndTime
+                                 WHERE activity_id = @ActivityId;";
                 SqlCommand command = new(query, connection);
 
                 // Add parameters to prevent SQL injection
@@ -165,7 +173,7 @@ namespace ProjectDatabases.Repositories
             using (SqlConnection connection = new(_connectionString))
             {
                 // 2. Create an SQL command with a query
-                string query = "DELETE FROM Activity WHERE activity_id = @ActivityId";
+                string query = @"DELETE FROM Activity WHERE activity_id = @ActivityId;";
                 SqlCommand command = new(query, connection);
 
                 // Prevent SQL injection
