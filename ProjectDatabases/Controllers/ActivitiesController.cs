@@ -7,13 +7,12 @@ namespace ProjectDatabases.Controllers
     public class ActivitiesController : Controller
     {
         private readonly IActivityRepository _activitiesRepository;
-        
-        public ActivitiesController(IActivityRepository activitiesRepository) 
+
+        public ActivitiesController(IActivityRepository activitiesRepository)
         {
             _activitiesRepository = activitiesRepository;
         }
 
-        // No search results
         public IActionResult Index(string search)
         {
             if (string.IsNullOrEmpty(search))
@@ -27,7 +26,7 @@ namespace ProjectDatabases.Controllers
                 // Get filtered activites via repository
                 List<Activity>? filteredActivities = _activitiesRepository.Search(search);
                 return View(filteredActivities);
-            }       
+            }
         }
 
         [HttpGet]
@@ -60,14 +59,21 @@ namespace ProjectDatabases.Controllers
         // It references app.MapControllerRoute(); in program.cs
         public IActionResult Edit(int? id)
         {
+            // No id was provided 
             if (id == null)
             {
-                return NotFound();
+                return NotFound("Error: Please provide an activity ID to edit.");
             }
 
             // Get Activity via repository
-            // Potential problem -> ids of non-existing activities can be filled in the url
             Activity? activity = _activitiesRepository.GetById((int)id);
+
+            // No activity is provided
+            if (activity == null)
+            {
+                return NotFound($"Error: Activity with ID {id} not found.");
+            }
+
             return View(activity);
         }
 
@@ -94,13 +100,21 @@ namespace ProjectDatabases.Controllers
         [HttpGet]
         public IActionResult Delete(int? id)
         {
+            // No id was provided 
             if (id == null)
             {
-                return NotFound();
+                return NotFound("Error: Please provide an activity ID to delete.");
             }
 
-            // Get activity via repository
+            // Get Activity via repository
             Activity? activity = _activitiesRepository.GetById((int)id);
+
+            // No activity is provided
+            if (activity == null)
+            {
+                return NotFound($"Error: Activity with ID {id} not found.");
+            }
+
             return View(activity);
         }
 

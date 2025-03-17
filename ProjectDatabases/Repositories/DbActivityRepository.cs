@@ -89,7 +89,7 @@ namespace ProjectDatabases.Repositories
 
         public Activity? GetById(int activityId)
         {
-            Activity activity = new();
+            Activity? activity = null;
 
             // 1. Create an SQL connection with a connection string
             using (SqlConnection connection = new(_connectionString))
