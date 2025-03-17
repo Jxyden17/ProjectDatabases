@@ -123,7 +123,8 @@ namespace ProjectDatabases.Repositories
             // 1. Create an SQL connection with a connection string
             using (SqlConnection connection = new(_connectionString))
             {
-                //2. Create an SQL command with a query
+                // 2. Create an SQL command with a query
+                // Duplicates on [name] are prevented with a UNIQUE constraint in the SQL Database design
                 string query = @"INSERT INTO Activity ([name], start_time, end_time) VALUES (@ActivityName, @StartTime, @EndTime);
                                  SELECT SCOPE_IDENTITY();";
                 SqlCommand command = new(query, connection);

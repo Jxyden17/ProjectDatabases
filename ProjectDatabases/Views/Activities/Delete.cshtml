@@ -25,4 +25,12 @@
 
     <button type="submit" class="btn btn-danger">Delete</button>
 </form>
+@* Error message *@
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">
+        <h2>An error occured!</h2>
+        @TempData["ErrorMessage"]
+    </div>
+}
 <a href="/Activities/Index">Back to Activities list</a>

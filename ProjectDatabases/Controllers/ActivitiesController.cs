@@ -46,8 +46,10 @@ namespace ProjectDatabases.Controllers
 
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception ex)
             {
+                // Send error through TempData object to the view
+                TempData["ErrorMessage"] = ex.Message;
                 // Something goes wrong, go back to view
                 return View(activity);
             }
@@ -64,6 +66,7 @@ namespace ProjectDatabases.Controllers
             }
 
             // Get Activity via repository
+            // Potential problem -> ids of non-existing activities can be filled in the url
             Activity? activity = _activitiesRepository.GetById((int)id);
             return View(activity);
         }
@@ -79,9 +82,11 @@ namespace ProjectDatabases.Controllers
                 // Go back to activity list (via Index)
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception ex)
             {
-                // Soemthing's wrong, go back to view with user
+                // Send error through TempData object to the view
+                TempData["ErrorMessage"] = ex.Message;
+                // Something's wrong, go back to view with user
                 return View(activity);
             }
         }
@@ -110,8 +115,10 @@ namespace ProjectDatabases.Controllers
                 // Go back to activity list (via Index)
                 return RedirectToAction("Index");
             }
-            catch
+            catch (Exception ex)
             {
+                // Send error through TempData object to the view
+                TempData["ErrorMessage"] = ex.Message;
                 // Something is wrong, go back to view with activity
                 return View(activity);
             }
