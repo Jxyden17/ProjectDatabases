@@ -6,7 +6,7 @@ namespace ProjectDatabases.Models
     {
         // Properties
         public int ActivityId { get; set; }
-        public string ActivityName { get; set; }
+        public string? ActivityName { get; set; }
         public DateTime StartTime { get; set; }
         public DateTime EndTime {  get; set; }
 

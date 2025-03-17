@@ -10,6 +10,8 @@
         <input class="form-control col" type="search" id="search" name="search" placeholder="Search for an activity..." aria-label="Search for an activity" value="@ViewData["Search"]" />
         <button class="btn btn-outline-success col-auto mx-2" type="submit">Search</button>
     </form>
+    @if (@Model.Count > 0)
+    {
     <table class="table table-hover">
         <thead>
             <tr>
@@ -38,5 +40,10 @@
             }
         </tbody>
     </table>
+    }
+    else
+    {
+        <p>No activities found.</p>
+    }
     <a href="/Activities/Create">Create an activity</a>
 </div>
