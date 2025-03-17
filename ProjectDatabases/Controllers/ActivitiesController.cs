@@ -23,6 +23,9 @@ namespace ProjectDatabases.Controllers
             }
             else
             {
+                // Return the used search string to the view
+                ViewData["Search"] = search;
+
                 // Get filtered activites via repository
                 List<Activity>? filteredActivities = _activitiesRepository.Search(search);
                 return View(filteredActivities);

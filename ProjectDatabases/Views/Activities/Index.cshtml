@@ -7,7 +7,7 @@
     <h1>@ViewData["Title"]</h1>
     <p>Number of activities in the list: @Model.Count</p>
     <form class="row" action="/Activities/Index" method="GET">
-        <input class="form-control col" type="search" id="search" name="search" placeholder="Search for an activity..." aria-label="Search for an activity" />
+        <input class="form-control col" type="search" id="search" name="search" placeholder="Search for an activity..." aria-label="Search for an activity" value="@ViewData["Search"]" />
         <button class="btn btn-outline-success col-auto mx-2" type="submit">Search</button>
     </form>
     <table class="table table-hover">
