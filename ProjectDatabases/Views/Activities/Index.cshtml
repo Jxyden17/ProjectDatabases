@@ -23,8 +23,8 @@
             @{
                 foreach (Activity activity in Model)
                 {
-                    <tr>
-                        <td title="@activity.ActivityName">@activity.ActivityName</td>
+                    <tr title="@activity.ActivityName">
+                        <td>@activity.ActivityName</td>
                         <td>@activity.StartTime</td>
                         <td>@activity.EndTime</td>
                         <td>
