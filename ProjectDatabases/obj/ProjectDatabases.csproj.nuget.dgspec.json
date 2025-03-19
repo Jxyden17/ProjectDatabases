@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\ProjectDatabases.csproj": {}
+    "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\ProjectDatabases.csproj": {}
   },
   "projects": {
-    "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\ProjectDatabases.csproj": {
+    "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\ProjectDatabases.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\ProjectDatabases.csproj",
+        "projectUniqueName": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\ProjectDatabases.csproj",
         "projectName": "ProjectDatabases",
-        "projectPath": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\ProjectDatabases.csproj",
-        "packagesPath": "C:\\Users\\aloys\\.nuget\\packages\\",
-        "outputPath": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\obj\\",
+        "projectPath": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\ProjectDatabases.csproj",
+        "packagesPath": "C:\\Users\\Jayden\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\aloys\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Jayden\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,8 +44,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.200"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -75,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
