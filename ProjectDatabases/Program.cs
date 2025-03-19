@@ -15,7 +15,7 @@ namespace ProjectDatabases
 
             builder.Services.AddSingleton<IStudentRepository, StudentRepository>();
 
-            builder.Services.AddSingleton<IActivityRepository, DbActivityRepository>();
+            builder.Services.AddSingleton<IActivityRepository, ActivityRepository>();
 
 
             var app = builder.Build();
