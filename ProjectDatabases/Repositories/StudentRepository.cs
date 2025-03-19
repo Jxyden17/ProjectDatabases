@@ -49,6 +49,7 @@ namespace ProjectDatabases.Repositories
 
         public Student? GetById(int studentId)
         {
+            Student? student = null;
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
                 string query = "SELECT student_number, room_id, first_name, last_name, phone_number, class FROM STUDENT WHERE student_number = @studentId";
@@ -57,23 +58,16 @@ namespace ProjectDatabases.Repositories
                 command.Parameters.AddWithValue("@studentId", studentId);
 
                 connection.Open();
-                using (SqlDataReader reader = command.ExecuteReader())
+
+                SqlDataReader reader = command.ExecuteReader();
+
+                if (reader.Read())
                 {
-                    if (reader.Read())
-                    {
-                        return new Student
-                        {
-                            StudentNumber = reader.GetInt32(reader.GetOrdinal("student_number")),
-                            RoomId = reader.GetInt32(reader.GetOrdinal("room_id")),
-                            FirstName = reader.GetString(reader.GetOrdinal("first_name")),
-                            LastName = reader.GetString(reader.GetOrdinal("last_name")),
-                            PhoneNumber = reader.GetString(reader.GetOrdinal("phone_number")),
-                            ClassNumber = reader.GetString(reader.GetOrdinal("class"))
-                        };
-                    }
+                    student = ReadStudent(reader);
                 }
+                reader.Close();
             }
-            return null;
+            return student;
         }
 
         public void Add(Student student)
