@@ -4,11 +4,11 @@ using System.Linq.Expressions;
 
 namespace ProjectDatabases.Repositories
 {
-	public class DbRoomsRepository : IRoomsRepository
+	public class RoomsRepository : IRoomsRepository
 	{
 		private readonly string? _connectionString;
 
-		public DbRoomsRepository(IConfiguration configuration)
+		public RoomsRepository(IConfiguration configuration)
 		{
 			_connectionString = configuration.GetConnectionString("WhatsUpDatabase");
 		}
@@ -34,7 +34,17 @@ namespace ProjectDatabases.Repositories
 
 		public void Delete(Room room)
 		{
-			throw new NotImplementedException();
+			using (SqlConnection connection = new SqlConnection(_connectionString))
+			{
+				string query = $"DELETE FROM Room WHERE room_number = @room_number";
+				SqlCommand command  = new SqlCommand(query , connection);
+				command.Parameters.AddWithValue("@room_number", room.RoomNumber);
+
+				command.Connection.Open();
+				int nrOfRowsAffected = command.ExecuteNonQuery();
+				if (nrOfRowsAffected == 0) 
+					throw new Exception("No Records Deleted");
+			}
 		}
 
 		public List<Room> GetAll()
@@ -63,7 +73,7 @@ namespace ProjectDatabases.Repositories
 		{
 			using (SqlConnection connection = new SqlConnection(_connectionString))
 			{
-				string query = "SELECT room_number, name, capacity, building FROM Room WHERE room_number = @room_number";
+				string query = @"SELECT room_number, name, capacity, building FROM Room WHERE room_number = @room_number";
 
 				SqlCommand command = new SqlCommand(query, connection);
 				command.Parameters.AddWithValue("@room_number", roomNumber);
@@ -73,7 +83,7 @@ namespace ProjectDatabases.Repositories
 				{
 					if (reader.Read())
 					{
-						return new Room 
+						return new Room
 						{
 							RoomNumber = reader.GetInt32(reader.GetOrdinal("room_number")),
 							Name = reader.GetString(reader.GetOrdinal("name")),
@@ -81,15 +91,33 @@ namespace ProjectDatabases.Repositories
 							Building = reader.GetString(reader.GetOrdinal("building"))
 						};
 					}
+
 				}
 
 			}
 			return null;
 		}
 
-		public void Update(Room room)
+		public void Edit(Room room)
 		{
-			throw new NotImplementedException();
+			using (SqlConnection connection = new SqlConnection(_connectionString))
+			{
+				string query = "UPDATE Room SET name = @name, capacity = @capacity," +
+								"building = @building WHERE room_number = @room_number";
+				SqlCommand command = new SqlCommand(query, connection);
+
+				command.Parameters.AddWithValue("@room_number", room.RoomNumber);
+				command.Parameters.AddWithValue("@name", room.Name);
+				command.Parameters.AddWithValue("@capacity", room.Capacity);
+				command.Parameters.AddWithValue("@building", room.Building);
+
+				connection.Open();
+				int nrOfRowsAffected = command.ExecuteNonQuery();
+				if (nrOfRowsAffected == 0)
+				{
+					throw new Exception("No records updated");
+				}
+			}
 		}
 
 		private Room ReadRoom(SqlDataReader reader)

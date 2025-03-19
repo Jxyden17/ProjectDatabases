@@ -1,0 +1,35 @@
+﻿@model ProjectDatabases.Models.Room
+@{
+	ViewData["Title"] = "Delete Room";
+	string? errorMessage = (string)ViewData["ErrorMessage"];
+}
+
+<h4>@errorMessage</h4>
+
+<h4>Delete Room</h4>
+<form action="/Rooms/Delete" method="POST">
+
+	<div class="form-group py-2">
+		<label for="RoomNumber">Room Number:</label>
+		<input type="number" id="RoomNumber" name="RoomNumber" class="form-control" readonly value="@Model?.RoomNumber" />
+	</div>
+
+	<div class="form-group py-2">
+		<label for="Name">Name:</label>
+		<input type="text" id="Name" name="Name" class="form-control" readonly value="@Model?.Name" />
+	</div>
+
+	<div class="form-group py-2">
+		<label for="Capacity">Capacity:</label>
+		<input type="number" id="Capacity" name="Capacity" class="form-control" min="1" max="10" readonly value="@Model?.Capacity" />
+	</div>
+
+	<div class="form-group py-2">
+		<label for="Building">Building:</label>
+		<input type="text" id="Building" name="Building" class="form-control" readonly value="@Model?.Building" />
+	</div>
+
+	<button type="submit" class="btn btn-primary">Delete</button>
+</form>
+
+<a href="/Rooms/Index">Back to list</a>

@@ -15,6 +15,7 @@
 			<th>Name</th>
 			<th>Capacity</th>
 			<th>Building</th>
+			<th>Actions</th>
 		</tr>
 	</thead>
 	<tbody>
@@ -26,6 +27,10 @@
 					<td>@room.Name</td>
 					<td>@room.Capacity</td>
 					<td>@room.Building</td>
+					<td>
+						<a href="/Rooms/Edit/@room.RoomNumber">Edit</a> |
+						<a href="/Rooms/Delete/@room.RoomNumber">Delete</a>
+					</td>
 				</tr>
 			}
 		}

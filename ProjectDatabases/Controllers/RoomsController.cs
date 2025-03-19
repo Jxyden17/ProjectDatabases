@@ -41,6 +41,58 @@ namespace ProjectDatabases.Controllers
 			}
 		}
 
+		[HttpGet]
+		public ActionResult Edit(int? Id)
+		{
+			if (Id == null)
+			{
+				return NotFound();
+			}
+			Room? room = _roomRepository.GetById((int)Id);
+			return View(room);
+		}
 		
+		[HttpPost]
+		public ActionResult Edit(Room room)
+		{
+			try
+			{
+				_roomRepository.Edit(room);
+				return RedirectToAction("Index");
+			}
+			catch (Exception ex)
+			{
+				ViewData["ErrorMessage"] = ex.Message;
+				return View(room);
+			}
+
+		}
+
+		[HttpGet]
+		public ActionResult Delete(int? Id)
+		{
+			if (Id == null)
+			{
+				return NotFound();
+			}
+			Room? room = _roomRepository.GetById((int)Id);
+			return View(room);
+		}
+
+
+		[HttpPost]
+		public ActionResult Delete(Room room)
+		{
+			try
+			{
+				_roomRepository.Delete(room);
+				return RedirectToAction("Index");
+			}
+			catch (Exception ex)
+			{
+				ViewData["ErrorMessage"] = ex.Message;
+				return View(room);
+			}
+		}
 	}
 }

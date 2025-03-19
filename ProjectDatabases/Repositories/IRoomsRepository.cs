@@ -7,7 +7,7 @@ namespace ProjectDatabases.Repositories
 		List<Room> GetAll();
 		Room? GetById(int room_number);
 		void Add(Room room);
-		void Update(Room room);
+		void Edit(Room room);
 		void Delete(Room room);
 	}
 }
