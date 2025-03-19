@@ -14,7 +14,22 @@ namespace ProjectDatabases.Repositories
 		}
 		public void Add(Room room)
 		{
-			throw new NotImplementedException();
+			using (SqlConnection connection = new SqlConnection(_connectionString))
+			{
+				string query = @"INSERT INTO Room (room_number, name, capacity, building)
+								 VALUES (@room_number, @name, @capacity, @building);
+								 SELECT SCOPE_IDENTITY();";
+				SqlCommand command = new SqlCommand(query, connection);
+
+				command.Parameters.AddWithValue("@room_number", room.RoomNumber);
+				command.Parameters.AddWithValue("@name", room.Name);
+				command.Parameters.AddWithValue("@capacity", room.Capacity);
+				command.Parameters.AddWithValue("@building", room.Building);
+
+				command.Connection.Open();
+
+				room.RoomNumber = Convert.ToInt32(command.ExecuteScalar());
+			}
 		}
 
 		public void Delete(Room room)
@@ -44,14 +59,14 @@ namespace ProjectDatabases.Repositories
 				return rooms;
 		}
 
-		public Room? GetById(int room_number)
+		public Room? GetById(int roomNumber)
 		{
 			using (SqlConnection connection = new SqlConnection(_connectionString))
 			{
 				string query = "SELECT room_number, name, capacity, building FROM Room WHERE room_number = @room_number";
 
 				SqlCommand command = new SqlCommand(query, connection);
-				command.Parameters.AddWithValue("@room_number", room_number);
+				command.Parameters.AddWithValue("@room_number", roomNumber);
 
 				connection.Open();
 				using (SqlDataReader reader = command.ExecuteReader())
@@ -60,7 +75,7 @@ namespace ProjectDatabases.Repositories
 					{
 						return new Room 
 						{
-							Room_number = reader.GetInt32(reader.GetOrdinal("room_number")),
+							RoomNumber = reader.GetInt32(reader.GetOrdinal("room_number")),
 							Name = reader.GetString(reader.GetOrdinal("name")),
 							Capacity = reader.GetInt32(reader.GetOrdinal("capacity")),
 							Building = reader.GetString(reader.GetOrdinal("building"))
@@ -79,12 +94,12 @@ namespace ProjectDatabases.Repositories
 
 		private Room ReadRoom(SqlDataReader reader)
 		{
-			int room_number = (int)reader["room_number"];
+			int roomNumber = (int)reader["room_number"];
 			string name = (string)reader["name"];
 			int capacity = (int)reader["capacity"];
 			string building = (string)reader["building"];
 
-			return new Room(room_number, name, capacity, building);
+			return new Room(roomNumber, name, capacity, building);
 		}
 	}
 }

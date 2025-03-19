@@ -26,6 +26,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/kuba2/Source/Repos/ProjectDatabases/ProjectDatabases/Views/Rooms/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbXNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/kuba2/Source/Repos/ProjectDatabases/ProjectDatabases/Views/Rooms/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUm9vbXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -38,23 +42,23 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jayden/source/repos/SomerenMVC/ProjectDatabases/Views/User/Create.cshtml]
+[C:/Users/kuba2/Source/Repos/ProjectDatabases/ProjectDatabases/Views/User/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jayden/source/repos/SomerenMVC/ProjectDatabases/Views/User/Delete.cshtml]
+[C:/Users/kuba2/Source/Repos/ProjectDatabases/ProjectDatabases/Views/User/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jayden/source/repos/SomerenMVC/ProjectDatabases/Views/User/Edit.cshtml]
+[C:/Users/kuba2/Source/Repos/ProjectDatabases/ProjectDatabases/Views/User/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jayden/source/repos/SomerenMVC/ProjectDatabases/Views/User/Index.cshtml]
+[C:/Users/kuba2/Source/Repos/ProjectDatabases/ProjectDatabases/Views/User/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Jayden/source/repos/SomerenMVC/ProjectDatabases/Views/_ViewImports.cshtml]
+[C:/Users/kuba2/Source/Repos/ProjectDatabases/ProjectDatabases/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 

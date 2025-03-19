@@ -1,9 +1,11 @@
 ﻿@model SomerenMVC.Models.User
 @{
     ViewData["Title"] = "Create User";
+    string? errorMessage = (string)ViewData["ErrorMessage"];
 }
 <h1>@ViewData["Title"]</h1>
 
+<h4>@errorMessage</h4>
 
 <h4>New User</h4>
 <form action="/User/Create" method="post">

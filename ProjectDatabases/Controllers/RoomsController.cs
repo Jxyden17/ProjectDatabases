@@ -17,6 +17,30 @@ namespace ProjectDatabases.Controllers
 			List<Room> room = _roomRepository.GetAll();
 			return View(room);
 		}
+
+		[HttpGet]
+
+		public ActionResult Create()
+		{
+			return View();
+		}
+
+		[HttpPost]
+		public ActionResult Create(Room room)
+		{
+			try
+			{
+				_roomRepository.Add(room);
+
+				return RedirectToAction("Index");
+			}
+			catch (Exception ex)
+			{
+				ViewData["ErrorMessage"] = ex.Message;
+				return View(room);
+			}
+		}
+
 		
 	}
 }

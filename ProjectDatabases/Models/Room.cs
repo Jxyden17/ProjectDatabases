@@ -2,7 +2,7 @@
 {
 	public class Room
 	{
-		public int Room_number { get; set; }
+		public int RoomNumber { get; set; }
 		public string Name { get; set; }
 		public int Capacity { get; set; }
 		public string Building { get; set; }
@@ -11,9 +11,9 @@
 		{
 
 		}
-		public Room(int room_number, string name, int capacity, string building)
+		public Room(int roomNumber, string name, int capacity, string building)
 		{
-			Room_number = room_number;
+			RoomNumber = roomNumber;
 			Name = name;
 			Capacity = capacity;
 			Building = building;
