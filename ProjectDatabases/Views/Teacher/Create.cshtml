@@ -1,0 +1,47 @@
+﻿@model ProjectDatabases.Models.Teacher
+@{
+    ViewData["Title"] = "Create Teacher";
+    string? errorMesssage = (string)ViewData["ErrorMessage"];
+}
+
+<h4>@errorMesssage</h4>
+<h4>New Teacher</h4>
+<form action="/Teacher/Create" method="POST">
+    <input type="hidden" name="TeacherId" value="@Model?.TeacherId" />
+    
+    <div class="form-group-py-2">
+        <label for="RoomId">Room:</label>
+
+        <input type="text" id="RoomId" name="RoomId" class="form-control" required value="@Model?.RoomId" />
+
+    </div> 
+    <div class="form-group-py-2">
+        <label for="FirstName">First Name:</label>
+
+        <input type="text" id="FirstName" name="FirstName" class="form-control" required value="@Model?.FirstName" />
+    </div>
+
+
+  <div class="form-group-py-2">
+
+        <label for="LastName">Last Name:</label>
+
+        <input type="text" id="LastName" name="LastName" class="form-control" required value="@Model?.LastName" />
+    </div>
+
+
+    <div class="form-group py-2">
+        <label for="PhoneNumber">Phone number:</label>
+        <input type="text" id="PhoneNumber" name="PhoneNumber" class="form-control" required value="@Model?.PhoneNumber" />
+    </div>
+
+  
+    <div class="form-group py-2">
+        <label for="Age">Age:</label>
+        <input type="text" id="Age" name="Age" class="form-control" required value="@Model?.Age" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>
+
+<a href="/Teacher/Index"> Back to list.</a>
