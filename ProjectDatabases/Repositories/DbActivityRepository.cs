@@ -7,7 +7,7 @@ namespace ProjectDatabases.Repositories
     public class DbActivityRepository : ConnectionDatabase , IActivityRepository 
     {
         public DbActivityRepository(IConfiguration configuration)
-            : base(configuration, "ProjectDatabase")
+            : base(configuration)
         {
         }
 

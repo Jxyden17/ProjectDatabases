@@ -6,9 +6,9 @@ namespace ProjectDatabases.Repositories
     {
         protected readonly string? _connectionString;
 
-        protected ConnectionDatabase(IConfiguration configuration, string databaseName)
+        protected ConnectionDatabase(IConfiguration configuration)
         {
-            _connectionString = configuration.GetConnectionString(databaseName);
+            _connectionString = configuration.GetConnectionString("ProjectDatabase");
         }
     }
 }
