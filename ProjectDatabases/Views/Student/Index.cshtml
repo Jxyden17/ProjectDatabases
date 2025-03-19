@@ -1,0 +1,39 @@
+﻿@model List<ProjectDatabases.Models.Student>
+
+@{
+    ViewData["Title"] = "student Page";
+}
+
+<a href="/student/Create">Create New</a>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th class="col">student_number</th>
+            <th class="col">room_id</th>
+            <th class="col">first_name</th>
+            <th class="col">last_name</th>
+            <th class="col">phone_number</th>
+            <th class="col">class</th>
+            <th class="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var student in Model)
+            {
+                <tr>
+                <th scope="row">@student.StudentNumber</th>
+                <td>@student.RoomId</td>
+                <td>@student.FirstName</td>
+                <td>@student.LastName</td>
+                <td>@student.PhoneNumber</td>
+                <td>@student.ClassNumber</td>
+                <td>
+                        <a href="/Student/Edit/@student.StudentNumber">Edit</a>
+                        <a href="/Student/Delete/@student.StudentNumber">Delete</a>
+                </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
