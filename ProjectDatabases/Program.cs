@@ -1,5 +1,4 @@
 
-
 using ProjectDatabases.Repositories;
 
 namespace ProjectDatabases
@@ -12,6 +11,9 @@ namespace ProjectDatabases
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddSingleton<IRoomsRepository, RoomsRepository>();
+
 
             builder.Services.AddScoped<ITeacherRepository, TeacherRepository>();
 
