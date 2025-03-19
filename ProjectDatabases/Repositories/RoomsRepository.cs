@@ -4,15 +4,13 @@ using System.Linq.Expressions;
 
 namespace ProjectDatabases.Repositories
 {
-	public class RoomsRepository : IRoomsRepository
+	public class RoomsRepository : ConnectionDatabase,IRoomsRepository
 	{
-		private readonly string? _connectionString;
-
-		public RoomsRepository(IConfiguration configuration)
-		{
-			_connectionString = configuration.GetConnectionString("WhatsUpDatabase");
-		}
-		public void Add(Room room)
+        public RoomsRepository(IConfiguration configuration)
+            : base(configuration)
+        {
+        }
+        public void Add(Room room)
 		{
 			using (SqlConnection connection = new SqlConnection(_connectionString))
 			{
