@@ -33,7 +33,7 @@ namespace ProjectDatabases.Repositories
             return students;
         }
 
-        public Student ReadStudent(SqlDataReader reader)
+        private Student ReadStudent(SqlDataReader reader)
         {
             int studentNumber = (int)reader["student_number"];
             int roomId = (int)reader["room_id"];
@@ -43,6 +43,39 @@ namespace ProjectDatabases.Repositories
             string classNumber = (string)reader["class"];
 
             return new Student(studentNumber,roomId, firstName, lastName, phoneNumber, classNumber);
+        }
+
+        public List<Student> Search(string inputSearch)
+        {
+            List<Student> students = new();
+
+            //1. Create an SQL connection with a connection string
+            using (SqlConnection connection = new(_connectionString))
+            {
+                // 2. Create an SQL command with a query
+                string query = @"SELECT student_number, room_id, first_name, last_name, phone_number, class
+                                 FROM STUDENT
+                                 WHERE last_name LIKE @InputSearch
+                                 ORDER BY last_name ASC;";
+                SqlCommand command = new(query, connection);
+
+                // Add parameters to prevent SQL injection
+                command.Parameters.AddWithValue("@InputSearch", $"%{inputSearch}%");
+
+                // 3. Open the SQL connection
+                command.Connection.Open();
+
+                // 4. Execute SQL command
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Student student = ReadStudent(reader);
+                    students.Add(student);
+                }
+                reader.Close();
+            }
+            return students;
         }
 
         public Student? GetById(int studentId)
