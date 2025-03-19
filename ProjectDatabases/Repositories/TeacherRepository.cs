@@ -5,13 +5,11 @@
 using ProjectDatabases.Models;
 namespace ProjectDatabases.Repositories
 {
-    public class TeacherRepository : ITeacherRepository
+    public class TeacherRepository : ConnectionDatabase,ITeacherRepository
     {
-        private readonly string? _connectionString;
         public TeacherRepository(IConfiguration configuration)
+             : base(configuration)
         {
-            //_connectionString = configuration.GetConnectionString("WhatsUpDatabase"); // Local...
-            _connectionString = configuration.GetConnectionString("ProjectDatabase"); 
         }
 
         private Teacher ReadTeacher(SqlDataReader reader)

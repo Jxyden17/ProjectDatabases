@@ -1,12 +1,13 @@
-﻿﻿using ProjectDatabases.Models;
+﻿using ProjectDatabases.Models;
 using Microsoft.Data.SqlClient;
 using ProjectDatabases.Controllers;
 
 namespace ProjectDatabases.Repositories
 {
-    public class DbActivityRepository : ConnectionDatabase , IActivityRepository 
+    public class ActivityRepository : ConnectionDatabase , IActivityRepository 
+
     {
-        public DbActivityRepository(IConfiguration configuration)
+        public ActivityRepository(IConfiguration configuration)
             : base(configuration)
         {
         }
@@ -51,8 +52,7 @@ namespace ProjectDatabases.Repositories
             }
             return activities;
         }
-
-        public List<Activity> Search(string inputSearch)
+        public List<Activity> Search(string searchInput)
         {
             List<Activity> activities = new();
 
@@ -67,7 +67,7 @@ namespace ProjectDatabases.Repositories
                 SqlCommand command = new(query, connection);
 
                 // Add parameters to prevent SQL injection
-                command.Parameters.AddWithValue("@InputSearch", $"%{inputSearch}%");
+                command.Parameters.AddWithValue("@InputSearch", $"%{searchInput}%");
 
                 // 3. Open the SQL connection
                 command.Connection.Open();
@@ -94,8 +94,8 @@ namespace ProjectDatabases.Repositories
             {
                 // 2. Create an SQL command with a query
                 string query = @"SELECT activity_id, [name], start_time, end_time
-                               FROM Activity
-                               WHERE activity_id = @ActivityId;";
+                                 FROM Activity
+                                 WHERE activity_id = @ActivityId;";
                 SqlCommand command = new(query, connection);
 
                 // Add parameters to prevent SQL injection
