@@ -23,7 +23,7 @@ namespace ProjectDatabases.Repositories
             return new Activity(activityId, activityName, startTime, endTime);
         }
 
-        public List<Activity> GetActivityList()
+        public List<Activity> GetAll()
         {
             List<Activity> activities = new();
 
@@ -51,7 +51,7 @@ namespace ProjectDatabases.Repositories
             }
             return activities;
         }
-        public List<Activity> GetActivityList(string searchInput)
+        public List<Activity> Search(string searchInput)
         {
             List<Activity> activities = new();
 
@@ -82,16 +82,6 @@ namespace ProjectDatabases.Repositories
                 reader.Close();
             }
             return activities;
-        }
-
-        public List<Activity> GetAll()
-        {
-            return GetActivityList(null);
-        }
-
-        public List<Activity> Search(string searchInput)
-        {
-            return GetActivityList(searchInput);
         }
 
         public Activity? GetById(int activityId)

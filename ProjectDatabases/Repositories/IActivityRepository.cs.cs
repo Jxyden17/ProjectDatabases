@@ -4,8 +4,8 @@ namespace ProjectDatabases.Repositories
 {
     public interface IActivityRepository 
     {
-        List<Activity> GetActivityList();
-        List<Activity> GetActivityList(string searchInput);
+        List<Activity> GetAll();
+        List<Activity> Search(string searchInput);
         Activity? GetById(int ActivityId);
         void Add(Activity activity);
         void Update(Activity activity);
