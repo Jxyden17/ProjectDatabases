@@ -105,13 +105,12 @@ namespace ProjectDatabases.Repositories
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = $"INSERT INTO STUDENT (student_number, room_id, first_name, last_name, phone_number, class) " +
-                               "VALUES (@StudentNumber, @RoomId, @FirstName, @Lastname, @PhoneNumber, @ClassNumber); " +
+                string query = $"INSERT INTO STUDENT ( room_id, first_name, last_name, phone_number, class) " +
+                               "VALUES (@RoomId, @FirstName, @Lastname, @PhoneNumber, @ClassNumber); " +
                                "SELECT SCOPE_IDENTITY();";
 
                 SqlCommand command = new SqlCommand(query, connection);
 
-                command.Parameters.AddWithValue("@StudentNumber", student.StudentNumber);
                 command.Parameters.AddWithValue("@RoomId", student.RoomId);
                 command.Parameters.AddWithValue("@FirstName", student.FirstName);
                 command.Parameters.AddWithValue("@LastName", student.LastName);

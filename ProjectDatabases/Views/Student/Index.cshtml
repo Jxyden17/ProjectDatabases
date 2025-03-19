@@ -11,7 +11,6 @@
 <table class="table">
     <thead class="thead-dark">
         <tr>
-            <th class="col">student_number</th>
             <th class="col">room_id</th>
             <th class="col">first_name</th>
             <th class="col">last_name</th>
@@ -25,8 +24,7 @@
             foreach (var student in Model)
             {
                 <tr>
-                <th scope="row">@student.StudentNumber</th>
-                <td>@student.RoomId</td>
+                <th scope="row">@student.RoomId</th>
                 <td>@student.FirstName</td>
                 <td>@student.LastName</td>
                 <td>@student.PhoneNumber</td>
