@@ -1,6 +1,10 @@
 {
   "Version": 1,
+<<<<<<< HEAD
+  "Hash": "Oemo3jmq7zgrrWsnJByWU0Ed+IxcgZHsBW7xvI5pDcg=",
+=======
   "Hash": "7l0MvJepgpNeHKzdjSB+WBWfmxnTHH6TvFSNtgIiyc4=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
   "Source": "ProjectDatabases",
   "BasePath": "_content/ProjectDatabases",
   "Mode": "Default",
@@ -10,19 +14,32 @@
     {
       "Name": "ProjectDatabases\\wwwroot",
       "Source": "ProjectDatabases",
+<<<<<<< HEAD
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+=======
       "ContentRoot": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "BasePath": "_content/ProjectDatabases",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ProjectDatabases.styles.css",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "ProjectDatabases.styles.css",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ProjectDatabases.styles.css",
       "SourceId": "ProjectDatabases",
       "SourceType": "Computed",
       "ContentRoot": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/ProjectDatabases",
       "RelativePath": "ProjectDatabases#[.{fingerprint}]?.styles.css",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetKind": "All",
       "AssetMode": "CurrentProject",
       "AssetRole": "Primary",
@@ -31,6 +48,19 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ApplicationBundle",
+<<<<<<< HEAD
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\obj\\Debug\\net8.0\\scopedcss\\bundle\\ProjectDatabases.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProjectDatabases.bundle.scp.css",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "ProjectDatabases.bundle.scp.css",
+=======
       "Fingerprint": "a30pejc82h",
       "Integrity": "toZvcEkVdbU5SGirCMiXs/Fj0OiRo3y0/PhGWE6fqvw=",
       "CopyToOutputDirectory": "Never",
@@ -44,6 +74,7 @@
       "ContentRoot": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/ProjectDatabases",
       "RelativePath": "ProjectDatabases#[.{fingerprint}]!.bundle.scp.css",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetKind": "All",
       "AssetMode": "Reference",
       "AssetRole": "Primary",
@@ -52,6 +83,23 @@
       "RelatedAsset": "",
       "AssetTraitName": "ScopedCss",
       "AssetTraitValue": "ProjectBundle",
+<<<<<<< HEAD
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ProjectDatabases.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\css\\site.css",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "css/site.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Fingerprint": "a30pejc82h",
       "Integrity": "toZvcEkVdbU5SGirCMiXs/Fj0OiRo3y0/PhGWE6fqvw=",
       "CopyToOutputDirectory": "Never",
@@ -69,17 +117,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "c2tiyv64ts",
       "Integrity": "pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\favicon.ico",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\favicon.ico",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -90,17 +154,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "61n19gt1b8",
       "Integrity": "Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\js\\site.js",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "js/site.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\js\\site.js",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -111,17 +191,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "xtxxf3hu2r",
       "Integrity": "hRQyftXiu1lLX2P9Ly9xa4gHJgLeR1uGN5qegUobtGo=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -132,17 +228,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "ozu22stjof",
       "Integrity": "ZMvmWDSU4zY1Z29EQGm5Mubfz/YxF4hiReGqx84o4tA=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -153,17 +265,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "73kdqttayv",
       "Integrity": "DRvWr0gangj5/5Q3DRn6ttzpcWDzl3OpHoAwAzNDR5Q=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -174,17 +302,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "6gzpyzhau4",
       "Integrity": "SiIVMGgRhdXjKSTIddX7mh9IbOXVcwQWc7/p4nS6D/0=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -195,17 +339,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "8inm30yfxf",
       "Integrity": "gBwg2tmA0Ci2u54gMF1jNCVku6vznarkLS6D76htNNQ=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -216,17 +376,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "gjcw7pocpk",
       "Integrity": "hA1uBYAPgKq7OVoXF7sqU9NtylyP0K7AJn0a4zQcTbg=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -237,17 +413,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "4gxs3k148c",
       "Integrity": "VFvmi/ZSwQFmjS6Pry9B8zXeZ/GA168TXLyykDhNMZE=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -258,17 +450,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "6l4ir0ityv",
       "Integrity": "ukKL5IDSyNoXFyp0wkgXeBpBITyM7JsCE6Dp96H1vI8=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -279,17 +487,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "fctod5rc9n",
       "Integrity": "j7uqK5VoTT4rUHMr911QEU5Sa94lR3uh9E28XBMlzrM=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -300,17 +524,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "nakmwdwsxp",
       "Integrity": "P4Ski6RrsG4nxKfPqaVoyRMoesl9UzArmfT+4fLqKHY=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -321,17 +561,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "st1cbwfwo5",
       "Integrity": "QO8cMbVkLiktUX1cHeXSUSe5nXMXUgyL9cjwnMyxPqc=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -342,17 +598,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "5p029spbuu",
       "Integrity": "96ayIUEnpKr7n5BIsFK5vJ3qXMXFgvRl9/CBcHs6/Ts=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -363,17 +635,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "5vj65cig9w",
       "Integrity": "72C/qDCGu+OwWeVA03bf9Ke0T8oIozCub0lfJkhzhvE=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -384,17 +672,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "e6q6xbwqzk",
       "Integrity": "+ugQREUkP4Wnp1VX2L2lvw0Q2mgKYvYAZr1c2or+ysM=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -405,17 +709,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "2q4vfeazbq",
       "Integrity": "qvA39OMlEs53jaewqVFmE8DQQrio47bZtlTs+Wu6U8g=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -426,17 +746,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "dy6jgresuo",
       "Integrity": "9eX2dpELXvYs+6il2MHwf5OOPVOZjxVK1b1GWgL0B0k=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -447,17 +783,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "o371a8zbv2",
       "Integrity": "NDSZjIiMPRIoO7/w7+jHef8retP4riQa8PMj4BVRGok=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -468,17 +820,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "mk8rdyw69w",
       "Integrity": "Jtl65EICD4ds6dQZbx1ongvMXj8D127HCg5XRBXXYGw=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -489,17 +857,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "jeal3x0ldm",
       "Integrity": "FZG0KxbNqITUi4QY7QvPFRS/TccntMfFWfSTdHN/pws=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -510,17 +894,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "z7kmom2977",
       "Integrity": "359CMPAICGkV+zve4A4HJMha3bwqTFTjl+QC1KJK5DQ=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -531,17 +931,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "okkk44j0xs",
       "Integrity": "2BbRsE/+czX1ufmDPGpnEieC9u6I3m5BKNDSX1ob3lg=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -552,17 +968,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "97yrjpyf9r",
       "Integrity": "G0PQCDL7ETO6rITRlBIHDKvvSuJFn5p6h+WmbPX5xr4=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -573,17 +1005,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "cwzlr5n8x4",
       "Integrity": "/EdWHN6t5XYPplC88vixGfrBvfEii19kAssb+0YBVU8=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -594,17 +1042,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "y53cy5s2zj",
       "Integrity": "BnHmEJpgor1n0UuwNdXG2VhHdV1r9MibuqBVHsgp9a8=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -615,17 +1079,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "wmug9u23qg",
       "Integrity": "GMDk5pA5dFkOimkBAWeEjYZ+7lgHPS0jYln6p/WJVYs=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -636,17 +1116,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "z9shlbduue",
       "Integrity": "mcVOHRq7FsWaycSfboGsTpzuQZ3cIOR/GDHYxL6q2Yg=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -657,17 +1153,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "j75batdsum",
       "Integrity": "4WIqPof/vrXYO/jeJ4fDOQKUYWIwe64V3d+9/qNju20=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -678,17 +1190,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "2yn17lgxub",
       "Integrity": "ekoF4YNq4OUU4BoZ6FG2LTKD68LJvW49arNgykHOZfM=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -699,17 +1227,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "vy0bq9ydhf",
       "Integrity": "p1dop4slefZhL4zG2pa6+2HUrOY1UUArGJXmet8Md9c=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -720,17 +1264,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "ophe14yye5",
       "Integrity": "1N1aPW6sTYexHfJCcDS4iElpPdWahP2Fr+Um56w0PjI=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -741,17 +1301,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "ab1c3rmv7g",
       "Integrity": "puDgKwvlFAord9R8G8of9P2CVYIJUFSoIbjDLEsKEH0=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -762,17 +1338,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "ik6i2hrs65",
       "Integrity": "wseUsl7uipUzPYc/DBMMTMFA7hBTcxpw29RKOxLzXSc=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -783,17 +1375,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "56d2bn4wt9",
       "Integrity": "02ka4ymoE5yEecLUncLG3/SouTQMnTJOktX+96Pt/88=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -804,17 +1412,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "f6zq8v6eb3",
       "Integrity": "l/hyCcHXdGwW6cO0xfobuAMZk3Nh8dsRdWwdaeSn9qo=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -825,17 +1449,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "kbynt5jhd9",
       "Integrity": "gO4uhxfGuK0ONjRlHuwfghGfEXT5azm1oHWnTEFGTfk=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -846,17 +1486,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "89qbw8ngem",
       "Integrity": "rAnWnVnzChxAAi8NS+Ilr1mE7Sj+do+X/DqyilNsznM=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -867,17 +1523,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "c2nslu3uf3",
       "Integrity": "xIBBxDPvWhk8/JdaFEZoejadfaKFUfZFwRS1D4Jkuro=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -888,17 +1560,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "n5w6o92d9r",
       "Integrity": "SySIctW5IQsq8JoYGrNJU4ZilHaieJru5P0+8vTcfDA=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -909,17 +1597,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "2lgwfvgpvi",
       "Integrity": "CllC/sbLvyLE9cQljmFRlITfqdZRnBv2ysX5LJtl/dg=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -930,17 +1634,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "jqwzsa9uv6",
       "Integrity": "hVv0IJy8sIv1uIlVQOHnZFNAGprmLfDV+x0anYPmxYU=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -951,17 +1671,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "wsezl0heh6",
       "Integrity": "sPqzWcSS9aRa2gpWTVNQzemajn8hrFjgXPj3j9QItQo=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/js/bootstrap.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -972,17 +1708,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "1piudyfv7h",
       "Integrity": "JV8zLOxqX3ENLwiQX8lCiDY3TvQzbeibDAsdYtalZ4w=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/js/bootstrap.js.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -993,17 +1745,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "6ukhryfubh",
       "Integrity": "Qkl5mZUZ64aYBaORRMP9jfD1kz8J6FwiV2M86JDJkdQ=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -1014,17 +1782,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "4908xmbfjr",
       "Integrity": "uAMYHAQlaHq1buKLwrk7FF4qxvcLWntS2/DpdKucfmU=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -1035,17 +1819,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "u33ctipx7g",
       "Integrity": "ui/FQI+y0IUsY8Pbi80b8s3GeEL+PsvdaLTONobpn88=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/bootstrap/LICENSE",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\bootstrap\\LICENSE",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -1056,17 +1856,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "81b7ukuj9c",
       "Integrity": "ZH6pA6BSx6fuHZvdaKph1DwUJ+VSYilIiEQu8ilnvqk=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/jquery/dist/jquery.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -1077,17 +1893,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "7s2n0ol71w",
       "Integrity": "KSI/3xxCrCexCupdzQJRP1B6Iqg+2NA+X2u38cQdqq8=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/jquery/dist/jquery.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -1098,17 +1930,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "ehgnz7f14e",
       "Integrity": "zp0HUArZHsK1JMJwdk7EyaM+eDINjTdOxADt5Ij2JRs=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/jquery/dist/jquery.min.map",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -1119,17 +1967,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "5pze98is44",
       "Integrity": "OZVI+w57FGwS9boYCZpH1ZSpcP7pYhLu4KtIUvPlZ4I=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/jquery/LICENSE.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -1140,17 +2004,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "mlv21k5csn",
       "Integrity": "hjIBkvmgxQXbNXK3B9YQ3t06RwLuQSQzC/dpvuB/lMk=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/jquery-validation/dist/additional-methods.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -1161,17 +2041,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "ay5nd8zt9x",
       "Integrity": "4jrcLBsi0Ugm8iLKdqDsAyaCDjkscYZdoGuNH/zqs4E=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/jquery-validation/dist/additional-methods.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -1182,17 +2078,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "9oaff4kq20",
       "Integrity": "N11IyJpHTgDcSCb3AfX4VrBnpGQeem1NoNzzgcXVyCc=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/jquery-validation/dist/jquery.validate.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -1203,17 +2115,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "6d0lkjaslc",
       "Integrity": "5qqb5VxQ2t2a6Zx/neW5uppLLvaGn4nn0NdYp6g8Lyg=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/jquery-validation/dist/jquery.validate.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -1224,17 +2152,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "l1zq2mitth",
       "Integrity": "6e0N+WJiVKBeTitK1GKSwPi3rbdPpLtuqaiitZjeD2w=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/jquery-validation/LICENSE.md",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -1245,17 +2189,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "x0q3zqp4vz",
       "Integrity": "geHEkw/WGPdaHQMRq5HuNY9snliNzU/y2OW8ycnhGXw=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation\\LICENSE.md"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -1266,17 +2226,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "03hjc8e09r",
       "Integrity": "xJbBMLGhYbXlPrrrddrSVmduyF6KEtbxEsYxw7hYZV4=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -1287,17 +2263,33 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "48y08845bh",
       "Integrity": "RFWFWIIPsjB4DucR4jqwxTWw13ZmtI+s6tVR2LJmZXk=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
+<<<<<<< HEAD
+      "Identity": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "SourceId": "ProjectDatabases",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Jayden\\source\\repos\\SomerenMVC\\ProjectDatabases\\wwwroot\\",
+      "BasePath": "_content/ProjectDatabases",
+      "RelativePath": "lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+=======
       "Identity": "C:\\DEV\\Inholland\\Periode 1.3 Databases\\Project Databases\\MVC\\ProjectDatabases\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "SourceId": "ProjectDatabases",
       "SourceType": "Discovered",
@@ -1308,16 +2300,22 @@
       "AssetMode": "All",
       "AssetRole": "Primary",
       "AssetMergeBehavior": "",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "AssetMergeSource": "",
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
+<<<<<<< HEAD
+=======
       "Fingerprint": "356vix0kms",
       "Integrity": "16aFlqtpsG9RyieKZUUUjkJpqTgcJtWXwT312I4Iz1s=",
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     }
+<<<<<<< HEAD
+=======
   ],
   "Endpoints": [
     {
@@ -6404,5 +7402,6 @@
         }
       ]
     }
+>>>>>>> 978efa45e8db67273df9b88ecfc78485bd6c7b9c
   ]
 }
