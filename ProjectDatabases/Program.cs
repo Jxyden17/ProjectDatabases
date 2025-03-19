@@ -1,5 +1,5 @@
 
-using MvcWhatsUp.Repositories;
+
 using ProjectDatabases.Repositories;
 
 namespace ProjectDatabases
@@ -12,8 +12,15 @@ namespace ProjectDatabases
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
-            builder.Services.AddSingleton<IUserRepository, DbUserRepository>();
+
             builder.Services.AddScoped<ITeacherRepository, TeacherRepository>();
+
+
+            builder.Services.AddSingleton<IStudentRepository, StudentRepository>();
+
+            builder.Services.AddSingleton<IActivityRepository, DbActivityRepository>();
+
+
 
             var app = builder.Build();
 
