@@ -3,12 +3,14 @@
 @{
     ViewData["Title"] = "student Page";
 }
-
+<form class="row my-4" action="/Student/Index" method="GET">
+    <input class="form-control col" type="search" id="search" name="search" placeholder="Search for an student..." aria-label="Search for an student" value="@ViewData["Search"]" />
+    <button class="btn btn-outline-success col-auto px-4 mx-2" type="submit">Search</button>
+</form>
 <a href="/student/Create">Create New</a>
 <table class="table">
     <thead class="thead-dark">
         <tr>
-            <th class="col">student_number</th>
             <th class="col">room_id</th>
             <th class="col">first_name</th>
             <th class="col">last_name</th>
@@ -22,8 +24,7 @@
             foreach (var student in Model)
             {
                 <tr>
-                <th scope="row">@student.StudentNumber</th>
-                <td>@student.RoomId</td>
+                <th scope="row">@student.RoomId</th>
                 <td>@student.FirstName</td>
                 <td>@student.LastName</td>
                 <td>@student.PhoneNumber</td>

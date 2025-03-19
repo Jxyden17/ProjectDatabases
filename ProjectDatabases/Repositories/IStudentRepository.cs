@@ -6,6 +6,7 @@ namespace ProjectDatabases.Repositories
     {
         List<Student> GetAll();
         Student? GetById(int student_number);
+        List<Student> Search(string inputSearch);
         void Add(Student student);
         void Update(Student student);
         void Delete(Student student);
