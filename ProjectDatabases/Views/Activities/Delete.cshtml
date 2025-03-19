@@ -1,0 +1,29 @@
+﻿@model ProjectDatabases.Models.Activity
+
+@{
+    ViewData["Title"] = "Delete Activity";
+}
+
+<h1>@ViewData["Title"]</h1>
+<form action="/Activities/Delete" method="POST">
+    <input hidden type="number" name="activityid" value="@Model?.ActivityId" />
+
+    <div class="form-group py-2">
+        <label for="activityname">Name:</label>
+        <input type="text" id="activityname" name="activityname" class="form-control" readonly value="@Model?.ActivityName" />
+    </div>
+
+    <div class="form-group py-2">
+        <label for="starttime">Start Time:</label>
+        <input type="datetime-local" id="starttime" name="starttime" class="form-control" readonly value="@Model?.ConvertSqlToHtmlDateTime(Model.StartTime)" />
+    </div>
+
+    <div class="form-group py-2">
+        <label for="endtime">End Time:</label>
+        <input type="datetime-local" id="endtime" name="endtime" class="form-control" readonly value="@Model?.ConvertSqlToHtmlDateTime(Model.EndTime)" />
+    </div>
+
+    <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+<partial name="_ErrorAlert" />
+<a href="/Activities/Index">Back to Activities list</a>
