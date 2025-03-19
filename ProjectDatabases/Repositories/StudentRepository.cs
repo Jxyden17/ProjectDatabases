@@ -3,10 +3,17 @@ using ProjectDatabases.Models;
 
 namespace ProjectDatabases.Repositories
 {
+<<<<<<< HEAD
     public class StudentRepository : ConnectionDatabase,IStudentRepository
     {
         public StudentRepository(IConfiguration configuration)
             : base(configuration)
+=======
+    public class StudentRepository : ConnectionDatabase , IStudentRepository
+    {
+        public StudentRepository(IConfiguration configuration)
+           : base(configuration)
+>>>>>>> 41fe9b77fd93e755953424d2751d0f8eebd5d2b2
         {
         }
         public List<Student> GetAll()
@@ -32,7 +39,7 @@ namespace ProjectDatabases.Repositories
             return students;
         }
 
-        public Student ReadStudent(SqlDataReader reader)
+        private Student ReadStudent(SqlDataReader reader)
         {
             int studentNumber = (int)reader["student_number"];
             int roomId = (int)reader["room_id"];
@@ -42,6 +49,39 @@ namespace ProjectDatabases.Repositories
             string classNumber = (string)reader["class"];
 
             return new Student(studentNumber,roomId, firstName, lastName, phoneNumber, classNumber);
+        }
+
+        public List<Student> Search(string inputSearch)
+        {
+            List<Student> students = new();
+
+            //1. Create an SQL connection with a connection string
+            using (SqlConnection connection = new(_connectionString))
+            {
+                // 2. Create an SQL command with a query
+                string query = @"SELECT student_number, room_id, first_name, last_name, phone_number, class
+                                 FROM STUDENT
+                                 WHERE last_name LIKE @InputSearch
+                                 ORDER BY last_name ASC;";
+                SqlCommand command = new(query, connection);
+
+                // Add parameters to prevent SQL injection
+                command.Parameters.AddWithValue("@InputSearch", $"%{inputSearch}%");
+
+                // 3. Open the SQL connection
+                command.Connection.Open();
+
+                // 4. Execute SQL command
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Student student = ReadStudent(reader);
+                    students.Add(student);
+                }
+                reader.Close();
+            }
+            return students;
         }
 
         public Student? GetById(int studentId)
@@ -71,13 +111,12 @@ namespace ProjectDatabases.Repositories
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = $"INSERT INTO STUDENT (student_number, room_id, first_name, last_name, phone_number, class) " +
-                               "VALUES (@StudentNumber, @RoomId, @FirstName, @Lastname, @PhoneNumber, @ClassNumber); " +
+                string query = $"INSERT INTO STUDENT ( room_id, first_name, last_name, phone_number, class) " +
+                               "VALUES (@RoomId, @FirstName, @Lastname, @PhoneNumber, @ClassNumber); " +
                                "SELECT SCOPE_IDENTITY();";
 
                 SqlCommand command = new SqlCommand(query, connection);
 
-                command.Parameters.AddWithValue("@StudentNumber", student.StudentNumber);
                 command.Parameters.AddWithValue("@RoomId", student.RoomId);
                 command.Parameters.AddWithValue("@FirstName", student.FirstName);
                 command.Parameters.AddWithValue("@LastName", student.LastName);

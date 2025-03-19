@@ -13,11 +13,23 @@ namespace ProjectDatabases.Controllers
             _studentRepository = studentRepository;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(string search)
         {
+            if (string.IsNullOrEmpty(search))
+            {
+                // Get all activities via repository
+                List<Student> allStudents = _studentRepository.GetAll();
+                return View(allStudents);
+            }
+            else
+            {
+                // Return the used search string to the view
+                ViewData["Search"] = search;
 
-            List<Student> students = _studentRepository.GetAll();
-            return View(students);
+                // Get filtered activites via repository
+                List<Student>? filteredStudents = _studentRepository.Search(search);
+                return View(filteredStudents);
+            }
         }
 
         //Create

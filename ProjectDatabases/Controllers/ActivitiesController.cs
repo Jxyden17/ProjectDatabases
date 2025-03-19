@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using ProjectDatabases.Models;
 using ProjectDatabases.Repositories;
 
@@ -48,11 +49,23 @@ namespace ProjectDatabases.Controllers
 
                 return RedirectToAction("Index");
             }
+            catch (SqlException ex)
+            {
+                // Send error through TempData object to the view
+                if (ex.Number == 2627 || ex.Number == 2601) // UNIQUE constraint violation
+                {
+                    TempData["ErrorMessage"] = "An activity with this name already exists. Please choose a different name.";
+                }
+                else
+                {
+                    TempData["ErrorMessage"] = ex.Message;
+                }
+                return View(activity);
+            }
             catch (Exception ex)
             {
                 // Send error through TempData object to the view
                 TempData["ErrorMessage"] = ex.Message;
-                // Something goes wrong, go back to view
                 return View(activity);
             }
         }
@@ -91,11 +104,23 @@ namespace ProjectDatabases.Controllers
                 // Go back to activity list (via Index)
                 return RedirectToAction("Index");
             }
+            catch (SqlException ex)
+            {
+                // Send error through TempData object to the view
+                if (ex.Number == 2627 || ex.Number == 2601) // UNIQUE constraint violation
+                {
+                    TempData["ErrorMessage"] = "An activity with this name already exists. Please choose a different name.";
+                }
+                else
+                {
+                    TempData["ErrorMessage"] = ex.Message;
+                }
+                return View(activity);
+            }
             catch (Exception ex)
             {
                 // Send error through TempData object to the view
                 TempData["ErrorMessage"] = ex.Message;
-                // Something's wrong, go back to view with user
                 return View(activity);
             }
         }
@@ -136,6 +161,7 @@ namespace ProjectDatabases.Controllers
             {
                 // Send error through TempData object to the view
                 TempData["ErrorMessage"] = ex.Message;
+
                 // Something is wrong, go back to view with activity
                 return View(activity);
             }
