@@ -1,16 +1,14 @@
-﻿using ProjectDatabases.Models;
+﻿﻿using ProjectDatabases.Models;
 using Microsoft.Data.SqlClient;
 using ProjectDatabases.Controllers;
 
 namespace ProjectDatabases.Repositories
 {
-    public class DbActivityRepository : IActivityRepository
+    public class DbActivityRepository : ConnectionDatabase , IActivityRepository 
     {
-        private readonly string? _connectionString;
-
         public DbActivityRepository(IConfiguration configuration)
+            : base(configuration, "ProjectDatabase")
         {
-            _connectionString = configuration.GetConnectionString("ProjectDatabase");
         }
 
         private Activity ReadActivity(SqlDataReader reader)

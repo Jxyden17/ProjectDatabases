@@ -2,7 +2,7 @@
 
 namespace ProjectDatabases.Repositories
 {
-    public interface IActivityRepository
+    public interface IActivityRepository 
     {
         List<Activity> GetAll();
         List<Activity> Search(string inputSearch);
