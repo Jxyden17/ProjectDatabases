@@ -126,5 +126,10 @@ namespace ProjectDatabases.Repositories
                     throw new Exception("No records deleted!");
             }
         }
+
+        public List<Teacher> Search(string inputSearch)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

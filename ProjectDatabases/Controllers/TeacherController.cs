@@ -17,17 +17,22 @@ namespace ProjectDatabases.Controllers
             _teacherRepository = teacherRepository;
         }
    
-        public IActionResult Index()
+        public IActionResult Index(string search)
         {
-            try
+            if (string.IsNullOrEmpty(search))
             {
-                List<Teacher> teachers = _teacherRepository.GetAll();
-                return View(teachers);
+                // Get all activities via repository
+                List<Teacher> allTeachers = _teacherRepository.GetAll();
+                return View(allTeachers);
             }
-            catch (Exception ex)
+            else
             {
-                
-                return View();
+                // Return the used search string to the view
+                ViewData["Search"] = search;
+
+                // Get filtered activites via repository
+                List<Teacher>? filteredActivities = _teacherRepository.Search(search);
+                return View(filteredActivities);
             }
         }
 
