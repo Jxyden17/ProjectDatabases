@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using MvcWhatsUp.Models;
-using MvcWhatsUp.Repositories;
+
 
 //using MvcWhatsUp.Repositories;
 using ProjectDatabases.Models;
