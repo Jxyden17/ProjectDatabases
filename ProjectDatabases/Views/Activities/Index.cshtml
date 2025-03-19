@@ -13,13 +13,13 @@
     @if (@Model.Count > 0)
     {
         <div class="table-responsive">
-            <table class="table table-hover">
+            <table class="table table-hover text-center">
                 <thead>
-                    <tr>
+                    <tr class="fs-5 bg-primary text-light">
                         <th>Activity Name</th>
                         <th>Start Time</th>
                         <th>End Time</th>
-                        <th class="text-end">Actions</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,7 +30,7 @@
                                 <td>@activity.ActivityName</td>
                                 <td>@activity.StartTime</td>
                                 <td>@activity.EndTime</td>
-                                <td class="text-end">
+                                <td>
                                     <div class="btn-group">
                                         <a href="/Activities/Edit/@activity.ActivityId" class="btn btn-outline-warning">Edit</a>
                                         <a href="/Activities/Delete/@activity.ActivityId" class="btn btn-outline-danger">Delete</a>
