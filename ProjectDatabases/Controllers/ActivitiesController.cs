@@ -18,7 +18,7 @@ namespace ProjectDatabases.Controllers
             if (string.IsNullOrEmpty(search))
             {
                 // Get all activities via repository
-                List<Activity> allActivities = _activitiesRepository.GetAll();
+                List<Activity> allActivities = _activitiesRepository.GetActivityList();
                 return View(allActivities);
             }
             else
@@ -27,7 +27,7 @@ namespace ProjectDatabases.Controllers
                 ViewData["Search"] = search;
 
                 // Get filtered activites via repository
-                List<Activity>? filteredActivities = _activitiesRepository.Search(search);
+                List<Activity>? filteredActivities = _activitiesRepository.GetActivityList(search);
                 return View(filteredActivities);
             }
         }
