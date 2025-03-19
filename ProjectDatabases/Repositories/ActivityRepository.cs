@@ -4,11 +4,8 @@ using ProjectDatabases.Controllers;
 
 namespace ProjectDatabases.Repositories
 {
-<<<<<<< HEAD
     public class ActivityRepository : ConnectionDatabase , IActivityRepository 
-=======
-    public class ActivityRepository : ConnectionDatabase, IActivityRepository
->>>>>>> 41fe9b77fd93e755953424d2751d0f8eebd5d2b2
+
     {
         public ActivityRepository(IConfiguration configuration)
             : base(configuration)

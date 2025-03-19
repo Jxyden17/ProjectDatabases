@@ -3,17 +3,10 @@ using ProjectDatabases.Models;
 
 namespace ProjectDatabases.Repositories
 {
-<<<<<<< HEAD
-    public class StudentRepository : ConnectionDatabase,IStudentRepository
-    {
-        public StudentRepository(IConfiguration configuration)
-            : base(configuration)
-=======
     public class StudentRepository : ConnectionDatabase , IStudentRepository
     {
         public StudentRepository(IConfiguration configuration)
            : base(configuration)
->>>>>>> 41fe9b77fd93e755953424d2751d0f8eebd5d2b2
         {
         }
         public List<Student> GetAll()
