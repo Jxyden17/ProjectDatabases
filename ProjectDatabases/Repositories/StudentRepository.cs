@@ -1,5 +1,4 @@
 ﻿using Microsoft.Data.SqlClient;
-using MvcWhatsUp.Models;
 using ProjectDatabases.Models;
 
 namespace ProjectDatabases.Repositories

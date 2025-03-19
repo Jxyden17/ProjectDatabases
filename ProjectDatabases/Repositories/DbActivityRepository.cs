@@ -10,7 +10,7 @@ namespace ProjectDatabases.Repositories
 
         public DbActivityRepository(IConfiguration configuration)
         {
-            _connectionString = configuration.GetConnectionString("WhatsUpDatabase");
+            _connectionString = configuration.GetConnectionString("ProjectDatabase");
         }
 
         private Activity ReadActivity(SqlDataReader reader)
