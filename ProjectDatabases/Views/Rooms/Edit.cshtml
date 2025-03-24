@@ -8,14 +8,11 @@
 
 <h4>Edit Room</h4>
 <form action="/Rooms/Edit" method="POST">
-	<div class="form-group py-2">
-		<label for="RoomNumber">Room Number:</label>
-		<input type="number" id="RoomNumber" name="RoomNumber" class="form-control" required value="@Model?.RoomNumber" />
-	</div>
+	<input hidden type="number" name="RoomID" value="@Model?.RoomID" />
 
 	<div class="form-group py-2">
-		<label for="Name">Name:</label>
-		<input type="text" id="Name" name="Name" class="form-control" required value="@Model?.Name" />
+		<label for="RoomNumber">Room Number:</label>
+		<input type="text" id="RoomNumber" name="RoomNumber" class="form-control" required value="@Model?.RoomNumber" />
 	</div>
 
 	<div class="form-group py-2">
@@ -24,8 +21,8 @@
 	</div>
 
 	<div class="form-group py-2">
-		<label for="Building">Building:</label>
-		<input type="text" id="Building" name="Building" class="form-control" required value="@Model?.Building" />
+		<label for="Type">Type:</label>
+		<input type="text" id="Type" name="Type" class="form-control" required value="@Model?.Type" />
 	</div>
 
 	<button type="submit" class="btn btn-primary">Save</button>

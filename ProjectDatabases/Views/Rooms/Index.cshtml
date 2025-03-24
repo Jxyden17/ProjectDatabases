@@ -12,9 +12,8 @@
 	<thead>
 		<tr>
 			<th>Room_number</th>
-			<th>Name</th>
 			<th>Capacity</th>
-			<th>Building</th>
+			<th>Type</th>
 			<th>Actions</th>
 		</tr>
 	</thead>
@@ -24,12 +23,11 @@
 			{
 				<tr>
 					<td>@room.RoomNumber</td>
-					<td>@room.Name</td>
 					<td>@room.Capacity</td>
-					<td>@room.Building</td>
+					<td>@room.Type</td>
 					<td>
-						<a href="/Rooms/Edit/@room.RoomNumber">Edit</a> |
-						<a href="/Rooms/Delete/@room.RoomNumber">Delete</a>
+						<a href="/Rooms/Edit/@room.RoomID">Edit</a> |
+						<a href="/Rooms/Delete/@room.RoomID">Delete</a>
 					</td>
 				</tr>
 			}

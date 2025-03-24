@@ -14,8 +14,8 @@ namespace ProjectDatabases.Controllers
 		}
 		public IActionResult Index()
 		{
-			List<Room> room = _roomRepository.GetAll();
-			return View(room);
+				List<Room> room = _roomRepository.GetAll();
+				return View(room);
 		}
 
 		[HttpGet]
