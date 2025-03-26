@@ -6,16 +6,12 @@
 
 <h4>@errorMessage</h4>
 
+
 <h4>Add New Room</h4>
 <form action="/Rooms/Create" method="POST">
 	<div class="form-group py-2">
 		<label for="RoomNumber">Room Number:</label>
-		<input type="number" id="RoomNumber" name="RoomNumber" class="form-control" required value="@Model?.RoomNumber" />
-	</div>
-
-	<div class="form-group py-2">
-		<label for="Name">Name:</label>
-		<input type="text" id="Name" name="Name" class="form-control" required value="@Model?.Name" />
+		<input type="text" id="RoomNumber" name="RoomNumber" class="form-control" required value="@Model?.RoomNumber" />
 	</div>
 
 	<div class="form-group py-2">
@@ -24,8 +20,8 @@
 	</div>
 
 	<div class="form-group py-2">
-		<label for="Building">Building:</label>
-		<input type="text" id="Building" name="Building" class="form-control" required value="@Model?.Building" />
+		<label for="Type">Type:</label>
+		<input type="text" id="Type" name="Type" class="form-control" required value="@Model?.Type" />
 	</div>
 
 	<button type="submit" class="btn btn-primary">Add</button>
