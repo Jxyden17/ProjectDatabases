@@ -133,7 +133,7 @@ namespace ProjectDatabases.Repositories
             using (SqlConnection connection = new(_connectionString))
             {
                 // 2. Create an SQL command with a query
-                string query = @"SELECT  teacher_id, room_id, first_name, last_name, phone_number, age
+                string query = @"SELECT teacher_id, room_id, first_name, last_name, phone_number, age
                                  FROM TEACHER
                                  WHERE last_name LIKE @InputSearch
                                  ORDER BY last_name ASC;";
