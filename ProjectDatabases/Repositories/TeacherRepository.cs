@@ -127,7 +127,35 @@ namespace ProjectDatabases.Repositories
 
         public List<Teacher> Search(string inputSearch)
         {
-            throw new NotImplementedException();
+            List<Teacher> teachers = new();
+
+            //1. Create an SQL connection with a connection string
+            using (SqlConnection connection = new(_connectionString))
+            {
+                // 2. Create an SQL command with a query
+                string query = @"SELECT  teacher_id, room_id, first_name, last_name, phone_number, age
+                                 FROM TEACHER
+                                 WHERE last_name LIKE @InputSearch
+                                 ORDER BY last_name ASC;";
+                SqlCommand command = new(query, connection);
+
+                // Add parameters to prevent SQL injection
+                command.Parameters.AddWithValue("@InputSearch", $"%{inputSearch}%");
+
+                // 3. Open the SQL connection
+                command.Connection.Open();
+
+                // 4. Execute SQL command
+                SqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    Teacher teacher = ReadTeacher(reader);
+                    teachers.Add(teacher);
+                }
+                reader.Close();
+            }
+            return teachers;
         }
     }
 }

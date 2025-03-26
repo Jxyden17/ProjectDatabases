@@ -6,7 +6,10 @@
 
 <div class="text-center">
     <h1 class="display-4">Teachers</h1>
+
     <p>Number of teachers in the list: @Model.Count</p>
+    <input class="form-control col" type="search" id="search" name="search" placeholder="Search for an activity..." aria-label="Search for an activity" value="@ViewData["Search"]" />
+    <button class="btn btn-outline-success col-auto px-4 mx-2" type="submit">Search</button>
 </div>
 
 
