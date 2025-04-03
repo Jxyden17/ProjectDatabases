@@ -8,10 +8,12 @@ namespace ProjectDatabases.Controllers
     public class ActivitiesController : Controller
     {
         private readonly IActivityRepository _activitiesRepository;
+        private readonly IStudentRepository _studentRepository;
 
-        public ActivitiesController(IActivityRepository activitiesRepository)
+        public ActivitiesController(IActivityRepository activitiesRepository, IStudentRepository studentRepository)
         {
             _activitiesRepository = activitiesRepository;
+            _studentRepository = studentRepository;
         }
 
         public IActionResult Index(string search)
@@ -165,6 +167,51 @@ namespace ProjectDatabases.Controllers
                 // Something is wrong, go back to view with activity
                 return View(activity);
             }
+        }
+
+        public IActionResult Participants(int? id)
+        {
+            // No id was provided 
+            if (id == null)
+            {
+                return NotFound("Error: Please provide an activity ID to view the participants of.");
+            }
+
+            // Get Activity via repository
+            ActivityParticipants? activityParticipants = new();
+            activityParticipants.Activity = _activitiesRepository.GetById((int)id);
+            activityParticipants.Participants = _studentRepository.GetParticipants((int)id);
+            activityParticipants.NonParticipants = _studentRepository.GetNonParticipants((int)id);
+
+            // No activity is provided
+            if (activityParticipants.Activity == null)
+            {
+                return NotFound($"Error: Activity with ID {id} not found.");
+            }
+
+            return View(activityParticipants);
+        }
+
+        public IActionResult AddParticipant(int? id, int? student_number)
+        {
+            if (id != null && student_number != null)
+            {
+                _activitiesRepository.AddStudent((int)id, (int)student_number);
+            }
+            // RedirectToAction(name of the action, name of the controller, values for the route
+            // Refreshes the entire page, causing it to scroll to the top. Need some kind of asynchronous loading / partial loading to improve UX.. :/
+            return RedirectToAction("Participants", "Activities", new { id = id });
+        }
+
+        public IActionResult RemoveParticipant(int? id, int? student_number)
+        {
+            if (id != null && student_number != null)
+            {
+                _activitiesRepository.RemoveStudent((int)id, (int)student_number);
+            }
+            // RedirectToAction(name of the action, name of the controller, values for the route
+            // Refreshes the entire page, causing it to scroll to the top. Need some kind of asynchronous loading / partial loading to improve UX.. :/
+            return RedirectToAction("Participants", "Activities", new { id = id });
         }
     }
 }

@@ -1,0 +1,89 @@
+﻿@model ProjectDatabases.Models.ActivityParticipants
+
+@{
+    ViewData["Title"] = $"{Model?.Activity?.ActivityName}";
+}
+
+<h1>@ViewData["Title"]</h1>
+<table class="table table-hover">
+    <tr>
+        <td>Start Time</td>
+        <td>@Model?.Activity?.StartTime</td>
+    </tr>
+    <tr>
+        <td>End Time</td>
+        <td>@Model?.Activity?.EndTime</td>
+    </tr>
+</table>
+<h2>@Model?.Activity?.ActivityName Participants</h2>
+@if (Model?.Participants?.Count > 0 && Model?.Participants != null)
+{
+    <table class="table text-center">
+        <thead>
+            <tr>
+                <th class="col-3" scope="col">First Name</th>
+                <th class="col-3" scope="col">Last Name</th>
+                <th class="col-3" scope="col">Class</th>
+                <th class="col-3" scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model.Participants)
+            {
+                <tr>
+                    <td>@student.FirstName</td>
+                    <td>@student.LastName</td>
+                    <td>@student.ClassNumber</td>
+                    <td>
+                        <form method="post" asp-action="RemoveParticipant" asp-controller="Activities">
+                            <input type="hidden" name="id" value="@Model?.Activity?.ActivityId" />
+                            <input type="hidden" name="student_number" value="@student.StudentNumber" />
+                            <button type="submit" class="btn btn-outline-danger">Remove from activity</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>No students participate in @Model?.Activity?.ActivityName.</p>
+}
+<h2>Non-participants</h2>
+@if (Model?.NonParticipants?.Count > 0 && Model?.NonParticipants != null)
+{
+    <table class="table text-center">
+        <thead>
+            <tr>
+                <th class="col-3" scope="col">First Name</th>
+                <th class="col-3" scope="col">Last Name</th>
+                <th class="col-3" scope="col">Class</th>
+                <th class="col-3" scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var student in Model.NonParticipants)
+            {
+                <tr>
+                    <td>@student.FirstName</td>
+                    <td>@student.LastName</td>
+                    <td>@student.ClassNumber</td>
+                    <td>
+                        <form method="post" asp-action="AddParticipant" asp-controller="Activities">
+                            <input type="hidden" name="id" value="@Model?.Activity?.ActivityId" />
+                            <input type="hidden" name="student_number" value="@student.StudentNumber" />
+                            <button type="submit" class="btn btn-outline-success">Add to activity</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>All students participate in @Model?.Activity?.ActivityName.</p>
+}
+<partial name="_ErrorAlert" />
+<a href="/Activities/Index">Back to Activities list</a>
