@@ -18,7 +18,7 @@
 <h2>@Model?.Activity?.ActivityName Participants</h2>
 @if (Model?.Participants?.Count > 0 && Model?.Participants != null)
 {
-    <table class="table text-center">
+    <table class="table table-hover text-center">
         <thead>
             <tr>
                 <th class="col-3" scope="col">First Name</th>
@@ -53,7 +53,7 @@ else
 <h2>Non-participants</h2>
 @if (Model?.NonParticipants?.Count > 0 && Model?.NonParticipants != null)
 {
-    <table class="table text-center">
+    <table class="table table-hover text-center">
         <thead>
             <tr>
                 <th class="col-3" scope="col">First Name</th>
