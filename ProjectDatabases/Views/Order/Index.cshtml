@@ -1,0 +1,105 @@
+﻿@model Order
+
+
+@{
+    ViewData["Title"] = "Order";
+}
+<div class="">
+    <h2>Place an Order</h2>
+
+    <form id="orderForm"  method="post">
+        <div class="form-group">
+            <label for="SelectedStudentId">Select Student:</label>
+            <select asp-for="SelectedStudentId" class="form-control">
+                <option value="">-- Choose Student --</option>
+                @foreach (var student in Model.Students)
+                {
+                    <option value="@student.StudentNumber">@student.FirstName @student.LastName</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="SelectedDrinkId">Select Drink:</label>
+            <select asp-for="SelectedDrinkId" class="form-control">
+                <option value="">-- Choose Drink --</option>
+                @foreach (var drink in Model.Drinks)
+                {
+                    <option value="@drink.DrinkId">@drink.Name (@(drink.IsAlcoholic ? "Alcoholic" : "Non-Alcoholic")) @drink.Stock</option>
+                }
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="DrinkAmount">Enter Amount:</label>
+            <input asp-for="DrinkAmount" type="number" class="form-control" min="1" required />
+        </div>
+
+        <button type="button" class="btn btn-primary" onclick="showConfirmation()">Confirm Order</button>
+    </form>
+</div>
+
+<!-- Bootstrap Modal -->
+<div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content rounded-3">
+            <div class="modal-header">
+                <h5 class="modal-title" id="confirmModalLabel">Confirm Your Order</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Student:</strong> <span id="confirmStudent"></span></p>
+                <p><strong>Drink:</strong> <span id="confirmDrink"></span></p>
+                <p><strong>Amount:</strong> <span id="confirmAmount"></span></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Edit</button>
+                <button type="button" class="btn btn-success" onclick="submitForm()">Place Order</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function showConfirmation() {
+            const studentSelect = document.querySelector('[name="SelectedStudentId"]');
+            const drinkSelect = document.querySelector('[name="SelectedDrinkId"]');
+            const amountInput = document.querySelector('[name="DrinkAmount"]');
+
+            const studentText = studentSelect.options[studentSelect.selectedIndex].text;
+            const drinkText = drinkSelect.options[drinkSelect.selectedIndex].text;
+            const amount = amountInput.value;
+
+            if (!studentSelect.value || !drinkSelect.value || !amount) {
+                alert("Select a student and drink");
+                return;
+            }
+
+            document.getElementById("confirmStudent").innerText = studentText;
+            document.getElementById("confirmDrink").innerText = drinkText;
+            document.getElementById("confirmAmount").innerText = amount;
+
+            const modal = new bootstrap.Modal(document.getElementById('confirmModal'));
+            modal.show();
+        }
+
+        function submitForm() {
+            document.getElementById("orderForm").submit();
+        }
+    </script>
+}
+
+
+@if (!string.IsNullOrEmpty(Model.ConfirmationMessage))
+{
+    <div class="alert alert-success mt-3">
+        <strong>Order Confirmed:</strong> @Model.ConfirmationMessage
+    </div>
+}
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger mt-3">
+        <strong>Order Error:</strong> @Model.ErrorMessage
+    </div>
+}
