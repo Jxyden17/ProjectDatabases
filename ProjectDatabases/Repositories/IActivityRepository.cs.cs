@@ -10,6 +10,7 @@ namespace ProjectDatabases.Repositories
         void Add(Activity activity);
         void Update(Activity activity);
         void Delete(Activity activity);
-
+        void AddStudent(int activityId, int studentNumber);
+        void RemoveStudent(int activityId, int studentNumber);
     }
 }
