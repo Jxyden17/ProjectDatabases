@@ -48,6 +48,7 @@ namespace ProjectDatabases.Controllers
             {
                 // Add activity via repository
                 _activitiesRepository.Add(activity);
+                TempData["SuccessMessage"] = "Activity successfully added!";
 
                 return RedirectToAction("Index");
             }
@@ -95,6 +96,7 @@ namespace ProjectDatabases.Controllers
             {
                 // Update Activity via repository
                 _activitiesRepository.Update(activity);
+                TempData["SuccessMessage"] = "Activity successfully edited!";
 
                 // Go back to activity list (via Index)
                 return RedirectToAction("Index");
@@ -141,6 +143,7 @@ namespace ProjectDatabases.Controllers
             {
                 // Delete activity via repository
                 _activitiesRepository.Delete(activity);
+                TempData["SuccessMessage"] = "Activity successfully deleted!";
 
                 // Go back to activity list (via Index)
                 return RedirectToAction("Index");
