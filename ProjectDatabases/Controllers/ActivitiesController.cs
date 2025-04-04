@@ -51,17 +51,10 @@ namespace ProjectDatabases.Controllers
 
                 return RedirectToAction("Index");
             }
-            catch (SqlException ex)
+            catch (SqlException ex) when (ex.Number == 2627 || ex.Number == 2601) // UNIQUE constraint violation)
             {
                 // Send error through TempData object to the view
-                if (ex.Number == 2627 || ex.Number == 2601) // UNIQUE constraint violation
-                {
-                    TempData["ErrorMessage"] = "An activity with this name already exists. Please choose a different name.";
-                }
-                else
-                {
-                    TempData["ErrorMessage"] = ex.Message;
-                }
+                TempData["ErrorMessage"] = "An activity with this name already exists. Please choose a different name.";
                 return View(activity);
             }
             catch (Exception ex)
@@ -106,17 +99,10 @@ namespace ProjectDatabases.Controllers
                 // Go back to activity list (via Index)
                 return RedirectToAction("Index");
             }
-            catch (SqlException ex)
+            catch (SqlException ex) when (ex.Number == 2627 || ex.Number == 2601) // UNIQUE constraint violation
             {
                 // Send error through TempData object to the view
-                if (ex.Number == 2627 || ex.Number == 2601) // UNIQUE constraint violation
-                {
-                    TempData["ErrorMessage"] = "An activity with this name already exists. Please choose a different name.";
-                }
-                else
-                {
-                    TempData["ErrorMessage"] = ex.Message;
-                }
+                TempData["ErrorMessage"] = "An activity with this name already exists. Please choose a different name.";
                 return View(activity);
             }
             catch (Exception ex)
@@ -204,7 +190,19 @@ namespace ProjectDatabases.Controllers
             }
             else //(id != null && student_number != null)
             {
-                _activitiesRepository.AddStudent((int)id, (int)student_number);
+                try
+                {
+                    _activitiesRepository.AddStudent((int)id, (int)student_number);
+                    TempData["SuccessMessage"] = "Student successfully added!";
+                }
+                catch (SqlException ex) when (ex.Number == 547) // Foreign key constraint violation)
+                {
+                    TempData["ErrorMessage"] = "The student you tried to add to this activity does not exist in the students list.";
+                }
+                catch (Exception ex)
+                {
+                    TempData["ErrorMessage"] = ex.Message;
+                }
             }
             // RedirectToAction(name of the action, name of the controller, values for the route
             // Refreshes the entire page, causing it to scroll to the top. Need some kind of asynchronous loading / partial loading to improve UX.. :/
@@ -217,17 +215,25 @@ namespace ProjectDatabases.Controllers
             {
                 TempData["ErrorMessage"] = "No activity ID was given with the removal request";
             }
-            else if  (student_number == null)
+            else if (student_number == null)
             {
                 TempData["ErrorMessage"] = "No student number was given with the removal request";
             }
             else //(id != null && student_number != null)
             {
-                _activitiesRepository.RemoveStudent((int)id, (int)student_number);
+                try
+                {
+                    _activitiesRepository.RemoveStudent((int)id, (int)student_number);
+                    TempData["SuccessMessage"] = "Student successfully removed!";
+                }
+                catch (Exception ex)
+                {
+                    TempData["ErrorMessage"] = ex.Message;
+                }
             }
-                // RedirectToAction(name of the action, name of the controller, values for the route
-                // Refreshes the entire page, causing it to scroll to the top. Need some kind of asynchronous loading / partial loading to improve UX.. :/
-                return RedirectToAction("Participants", "Activities", new { id = id });
+            // RedirectToAction(name of the action, name of the controller, values for the route
+            // Refreshes the entire page, causing it to scroll to the top. Need some kind of asynchronous loading / partial loading to improve UX.. :/
+            return RedirectToAction("Participants", "Activities", new { id = id });
         }
     }
 }
