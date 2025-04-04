@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProjectDatabases.Models;
 using ProjectDatabases.Repositories;
+using System.Reflection;
 
 namespace ProjectDatabases.Controllers
 {
@@ -44,8 +45,7 @@ namespace ProjectDatabases.Controllers
 
                     model.ErrorMessage = "Select a student and drink";
 
-                    model.Students = _studentRepository.GetAll();
-                    model.Drinks = _drinkRepository.GetAll();
+                    reloadStudentAndDrinks(model);
 
                     return View("Index", model);
                 }
@@ -60,18 +60,22 @@ namespace ProjectDatabases.Controllers
                 model.ConfirmationMessage = $"{student.FirstName} {student.LastName} ordered {model.DrinkAmount}x {drink.Name}";
 
                 // Reload students and drinks for the form
-                model.Students = _studentRepository.GetAll();
-                model.Drinks = _drinkRepository.GetAll();
+                reloadStudentAndDrinks(model);
 
                 return View(model);
             }
             catch (Exception ex)
             {
-                model.Students = _studentRepository.GetAll();
-                model.Drinks = _drinkRepository.GetAll();
+                reloadStudentAndDrinks(model);
                 model.ErrorMessage = "You cant order more than the amount of drinks.";
                 return View(model);
             }
+        }
+
+        public void reloadStudentAndDrinks(Order model)
+        {
+            model.Students = _studentRepository.GetAll();
+            model.Drinks = _drinkRepository.GetAll();
         }
     }
 }
