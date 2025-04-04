@@ -194,7 +194,15 @@ namespace ProjectDatabases.Controllers
 
         public IActionResult AddParticipant(int? id, int? student_number)
         {
-            if (id != null && student_number != null)
+            if (id == null)
+            {
+                TempData["ErrorMessage"] = "No activity ID was given with the add request";
+            }
+            else if (student_number == null)
+            {
+                TempData["ErrorMessage"] = "No student number was given with the add request";
+            }
+            else //(id != null && student_number != null)
             {
                 _activitiesRepository.AddStudent((int)id, (int)student_number);
             }
@@ -205,13 +213,21 @@ namespace ProjectDatabases.Controllers
 
         public IActionResult RemoveParticipant(int? id, int? student_number)
         {
-            if (id != null && student_number != null)
+            if (id == null)
+            {
+                TempData["ErrorMessage"] = "No activity ID was given with the removal request";
+            }
+            else if  (student_number == null)
+            {
+                TempData["ErrorMessage"] = "No student number was given with the removal request";
+            }
+            else //(id != null && student_number != null)
             {
                 _activitiesRepository.RemoveStudent((int)id, (int)student_number);
             }
-            // RedirectToAction(name of the action, name of the controller, values for the route
-            // Refreshes the entire page, causing it to scroll to the top. Need some kind of asynchronous loading / partial loading to improve UX.. :/
-            return RedirectToAction("Participants", "Activities", new { id = id });
+                // RedirectToAction(name of the action, name of the controller, values for the route
+                // Refreshes the entire page, causing it to scroll to the top. Need some kind of asynchronous loading / partial loading to improve UX.. :/
+                return RedirectToAction("Participants", "Activities", new { id = id });
         }
     }
 }

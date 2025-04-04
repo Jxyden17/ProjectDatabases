@@ -15,6 +15,7 @@
         <td>@Model?.Activity?.EndTime</td>
     </tr>
 </table>
+<partial name="_ErrorAlert"/>
 <h2>@Model?.Activity?.ActivityName Participants</h2>
 @if (Model?.Participants?.Count > 0 && Model?.Participants != null)
 {
@@ -85,5 +86,4 @@ else
 {
     <p>All students participate in @Model?.Activity?.ActivityName.</p>
 }
-<partial name="_ErrorAlert" />
 <a href="/Activities/Index">Back to Activities list</a>
