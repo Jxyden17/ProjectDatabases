@@ -32,7 +32,7 @@ namespace ProjectDatabases.Repositories
             return students;
         }
 
-        public Student ReadStudent(SqlDataReader reader)
+        private Student ReadStudent(SqlDataReader reader)
         {
             int studentNumber = (int)reader["student_number"];
             int roomId = (int)reader["room_id"];
