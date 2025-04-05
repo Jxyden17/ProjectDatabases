@@ -31,8 +31,8 @@ namespace ProjectDatabases.Controllers
                 ViewData["Search"] = search;
 
                 // Get filtered activites via repository
-                List<Teacher>? filteredActivities = _teacherRepository.Search(search);
-                return View(filteredActivities);
+                List<Teacher>? filteredTeachers = _teacherRepository.Search(search);
+                return View(filteredTeachers);
             }
         }
 

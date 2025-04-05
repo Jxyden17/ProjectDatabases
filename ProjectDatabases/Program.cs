@@ -19,6 +19,7 @@ namespace ProjectDatabases
             builder.Services.AddSingleton<IDrinkRepository, DrinkRepository>();
             builder.Services.AddSingleton<IOrderRepository, OrderRepository>();
 
+            builder.Services.AddScoped<ISupervisorsRepository, SupervisorsRepository>();
 
 
             var app = builder.Build();
