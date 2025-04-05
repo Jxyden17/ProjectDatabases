@@ -7,8 +7,9 @@
     <input class="form-control col" type="search" id="search" name="search" placeholder="Search for an student..." aria-label="Search for an student" value="@ViewData["Search"]" />
     <button class="btn btn-outline-success col-auto px-4 mx-2" type="submit">Search</button>
 </form>
+<div class="table-responsive">
 <a href="/student/Create">Create New</a>
-<table class="table">
+    <table class="table table-hover">
     <thead class="thead-dark">
         <tr>
             <th class="col">room_id</th>
@@ -38,3 +39,4 @@
         }
     </tbody>
 </table>
+</div>

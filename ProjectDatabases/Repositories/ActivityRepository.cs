@@ -202,6 +202,54 @@ namespace ProjectDatabases.Repositories
             }
         }
 
-        
+
+        public void AddStudent(int activityId, int studentNumber)
+        {
+            // 1. Create an SQL connection with a connection string
+            using (SqlConnection connection = new(_connectionString))
+            {
+                // 2. Create an SQL command with a query
+                string query = @"INSERT INTO Participation (student_number, activity_id)
+                                 VALUES (@StudentNumber, @ActivityId);";
+                SqlCommand command = new(query, connection);
+
+                // Add parameters to prevent SQL injection
+                command.Parameters.AddWithValue("@StudentNumber", studentNumber);
+                command.Parameters.AddWithValue("@ActivityId", activityId);
+
+                // 3. Open the SQL connection
+                connection.Open();
+
+                // 4. Execute the SQL command
+                int nrOfRowsAffected = command.ExecuteNonQuery();
+                if (nrOfRowsAffected == 0)
+                    throw new Exception("No students added!");
+            }
+        }
+
+        public void RemoveStudent(int activityId, int studentNumber)
+        {
+            // 1. Create an SQL connection with a connection string
+            using (SqlConnection connection = new(_connectionString))
+            {
+                // 2. Create an SQL command with a query
+                string query = @"DELETE FROM Participation
+                                 WHERE student_number = @StudentNumber AND activity_id = @ActivityId;";
+                SqlCommand command = new(query, connection);
+
+                // Add parameters to prevent SQL injection
+                command.Parameters.AddWithValue("@StudentNumber", studentNumber);
+                command.Parameters.AddWithValue("@ActivityId", activityId);
+
+                // 3. Open the SQL connection
+                connection.Open();
+
+                // 4. Execute the SQL command
+                int nrOfRowsAffected = command.ExecuteNonQuery();
+                if (nrOfRowsAffected == 0)
+                    throw new Exception("No students removed!");
+            }
+        }
+
     }
 }

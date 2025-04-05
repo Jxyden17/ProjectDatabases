@@ -4,8 +4,16 @@ It is an inline alert pop-up that you can use in other views
 *@
 @if (TempData["ErrorMessage"] != null)
 {
-    <div class="alert alert-danger my-4">
+    <div class="alert alert-danger alert-dismissible fade show my-4" role="alert">
         <h2>An error occured!</h2>
         @TempData["ErrorMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success alert-dismissible fade show my-4" role="alert">
+        @TempData["SuccessMessage"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
 }

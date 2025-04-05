@@ -13,14 +13,11 @@ namespace ProjectDatabases
             builder.Services.AddControllersWithViews();
 
             builder.Services.AddSingleton<IRoomsRepository, RoomsRepository>();
-
-
             builder.Services.AddScoped<ITeacherRepository, TeacherRepository>();
-
-
             builder.Services.AddSingleton<IStudentRepository, StudentRepository>();
-
             builder.Services.AddSingleton<IActivityRepository, ActivityRepository>();
+            builder.Services.AddSingleton<IDrinkRepository, DrinkRepository>();
+            builder.Services.AddSingleton<IOrderRepository, OrderRepository>();
 
             builder.Services.AddScoped<ISupervisorsRepository, SupervisorsRepository>();
 

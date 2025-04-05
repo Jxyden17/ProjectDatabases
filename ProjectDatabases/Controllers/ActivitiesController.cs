@@ -8,10 +8,12 @@ namespace ProjectDatabases.Controllers
     public class ActivitiesController : Controller
     {
         private readonly IActivityRepository _activitiesRepository;
+        private readonly IStudentRepository _studentRepository;
 
-        public ActivitiesController(IActivityRepository activitiesRepository)
+        public ActivitiesController(IActivityRepository activitiesRepository, IStudentRepository studentRepository)
         {
             _activitiesRepository = activitiesRepository;
+            _studentRepository = studentRepository;
         }
 
         public IActionResult Index(string search)
@@ -46,20 +48,14 @@ namespace ProjectDatabases.Controllers
             {
                 // Add activity via repository
                 _activitiesRepository.Add(activity);
+                TempData["SuccessMessage"] = "Activity successfully added!";
 
                 return RedirectToAction("Index");
             }
-            catch (SqlException ex)
+            catch (SqlException ex) when (ex.Number == 2627 || ex.Number == 2601) // UNIQUE constraint violation)
             {
                 // Send error through TempData object to the view
-                if (ex.Number == 2627 || ex.Number == 2601) // UNIQUE constraint violation
-                {
-                    TempData["ErrorMessage"] = "An activity with this name already exists. Please choose a different name.";
-                }
-                else
-                {
-                    TempData["ErrorMessage"] = ex.Message;
-                }
+                TempData["ErrorMessage"] = "An activity with this name already exists. Please choose a different name.";
                 return View(activity);
             }
             catch (Exception ex)
@@ -100,21 +96,15 @@ namespace ProjectDatabases.Controllers
             {
                 // Update Activity via repository
                 _activitiesRepository.Update(activity);
+                TempData["SuccessMessage"] = "Activity successfully edited!";
 
                 // Go back to activity list (via Index)
                 return RedirectToAction("Index");
             }
-            catch (SqlException ex)
+            catch (SqlException ex) when (ex.Number == 2627 || ex.Number == 2601) // UNIQUE constraint violation
             {
                 // Send error through TempData object to the view
-                if (ex.Number == 2627 || ex.Number == 2601) // UNIQUE constraint violation
-                {
-                    TempData["ErrorMessage"] = "An activity with this name already exists. Please choose a different name.";
-                }
-                else
-                {
-                    TempData["ErrorMessage"] = ex.Message;
-                }
+                TempData["ErrorMessage"] = "An activity with this name already exists. Please choose a different name.";
                 return View(activity);
             }
             catch (Exception ex)
@@ -153,6 +143,7 @@ namespace ProjectDatabases.Controllers
             {
                 // Delete activity via repository
                 _activitiesRepository.Delete(activity);
+                TempData["SuccessMessage"] = "Activity successfully deleted!";
 
                 // Go back to activity list (via Index)
                 return RedirectToAction("Index");
@@ -165,6 +156,87 @@ namespace ProjectDatabases.Controllers
                 // Something is wrong, go back to view with activity
                 return View(activity);
             }
+        }
+
+        public IActionResult Participants(int? id)
+        {
+            // No id was provided 
+            if (id == null)
+            {
+                return NotFound("Error: Please provide an activity ID to view the participants of.");
+            }
+
+            // Get Activity via repository
+            ActivityParticipants? activityParticipants = new();
+            activityParticipants.Activity = _activitiesRepository.GetById((int)id);
+            activityParticipants.Participants = _studentRepository.GetParticipants((int)id);
+            activityParticipants.NonParticipants = _studentRepository.GetNonParticipants((int)id);
+
+            // No activity is provided
+            if (activityParticipants.Activity == null)
+            {
+                return NotFound($"Error: Activity with ID {id} not found.");
+            }
+
+            return View(activityParticipants);
+        }
+
+        public IActionResult AddParticipant(int? id, int? student_number)
+        {
+            if (id == null)
+            {
+                TempData["ErrorMessage"] = "No activity ID was given with the add request";
+            }
+            else if (student_number == null)
+            {
+                TempData["ErrorMessage"] = "No student number was given with the add request";
+            }
+            else //(id != null && student_number != null)
+            {
+                try
+                {
+                    _activitiesRepository.AddStudent((int)id, (int)student_number);
+                    TempData["SuccessMessage"] = "Student successfully added!";
+                }
+                catch (SqlException ex) when (ex.Number == 547) // Foreign key constraint violation)
+                {
+                    TempData["ErrorMessage"] = "The student you tried to add to this activity does not exist in the students list.";
+                }
+                catch (Exception ex)
+                {
+                    TempData["ErrorMessage"] = ex.Message;
+                }
+            }
+            // RedirectToAction(name of the action, name of the controller, values for the route
+            // Refreshes the entire page, causing it to scroll to the top. Need some kind of asynchronous loading / partial loading to improve UX.. :/
+            return RedirectToAction("Participants", "Activities", new { id = id });
+        }
+
+        public IActionResult RemoveParticipant(int? id, int? student_number)
+        {
+            if (id == null)
+            {
+                TempData["ErrorMessage"] = "No activity ID was given with the removal request";
+            }
+            else if (student_number == null)
+            {
+                TempData["ErrorMessage"] = "No student number was given with the removal request";
+            }
+            else //(id != null && student_number != null)
+            {
+                try
+                {
+                    _activitiesRepository.RemoveStudent((int)id, (int)student_number);
+                    TempData["SuccessMessage"] = "Student successfully removed!";
+                }
+                catch (Exception ex)
+                {
+                    TempData["ErrorMessage"] = ex.Message;
+                }
+            }
+            // RedirectToAction(name of the action, name of the controller, values for the route
+            // Refreshes the entire page, causing it to scroll to the top. Need some kind of asynchronous loading / partial loading to improve UX.. :/
+            return RedirectToAction("Participants", "Activities", new { id = id });
         }
     }
 }
