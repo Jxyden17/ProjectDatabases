@@ -55,7 +55,7 @@ namespace ProjectDatabases.Repositories
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@teacher_id", TeacherId);
 
-                connection.Open();
+                command.Connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
 
                 if (reader.Read())

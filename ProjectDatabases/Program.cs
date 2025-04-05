@@ -22,6 +22,7 @@ namespace ProjectDatabases
 
             builder.Services.AddSingleton<IActivityRepository, ActivityRepository>();
 
+            builder.Services.AddScoped<ISupervisorsRepository, SupervisorsRepository>();
 
 
             var app = builder.Build();

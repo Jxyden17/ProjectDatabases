@@ -1,6 +1,7 @@
 ﻿using ProjectDatabases.Models;
 using Microsoft.Data.SqlClient;
 using ProjectDatabases.Controllers;
+using System.Windows.Input;
 
 namespace ProjectDatabases.Repositories
 {
@@ -116,6 +117,19 @@ namespace ProjectDatabases.Repositories
             return activity;
         }
 
+        //public Activity? GetActivityWithSupervisors(int activityId)
+        //{
+        //    Activity? activity = null;
+        //    List<Teacher> supervisors = new();
+        //    List <Teacher> nonSupervisors = new();
+
+        //    using (SqlConnection connection = new SqlConnection(_connectionString))
+        //    {
+        //        string query = @"SELECT "
+        //    }
+
+        //}
+
         public void Add(Activity activity)
         {
             // 1. Create an SQL connection with a connection string
@@ -187,5 +201,7 @@ namespace ProjectDatabases.Repositories
                     throw new Exception("No records deleted!");
             }
         }
+
+        
     }
 }
