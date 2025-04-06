@@ -27,7 +27,11 @@
 					<td>@room.Type</td>
 					<td>
 						<a href="/Rooms/Edit/@room.RoomID">Edit</a> |
-						<a href="/Rooms/Delete/@room.RoomID">Delete</a>
+						<a href="/Rooms/Delete/@room.RoomID">Delete</a> |
+						@if (room.Type == "student")
+						{
+							<a href="/Rooms/DormitoryStudents/@room.RoomID">Display Dormitory</a>
+						}
 					</td>
 				</tr>
 			}

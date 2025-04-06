@@ -161,72 +161,98 @@ namespace ProjectDatabases.Repositories
             }
         }
 
-        public List<Student> GetParticipants(int activityId)
+        public List<Student> GetAssignedStudents(int roomId)
         {
-            List<Student> students = new();
+			List<Student> students = new List<Student>();
 
-            //1. Create an SQL connection with a connection string
-            using (SqlConnection connection = new(_connectionString))
+            using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                // 2. Create an SQL command with a query
-                string query = @"SELECT S.room_id, S.student_number, S.first_name, S.last_name, S.phone_number, S.class
-                                 FROM Participation AS P
-                                 JOIN Student AS S
-                                     ON P.student_number = S.student_number
-                                 WHERE P.activity_id = @ActivityId
-                                 ORDER BY S.last_name ASC;";
+                string query = "SELECT S.student_number, S.room_id, S.first_name, S.last_name, S.phone_number, S.class " +
+                               "FROM DORMITORY AS D " +
+                               "JOIN STUDENT AS S ON D.student_number = S.student_number " +
+                               "WHERE D.room_id = @RoomId ORDER BY first_name ";
+
+				SqlCommand command = new(query, connection);
+
+				command.Parameters.AddWithValue("@RoomId", roomId);
+
+				command.Connection.Open();
+
+				SqlDataReader reader = command.ExecuteReader();
+
+				while (reader.Read())
+				{
+					Student student = ReadStudent(reader);
+					students.Add(student);
+				}
+				reader.Close();
+			}
+			return students;
+		}
+
+
+
+		public List<Student> GetUnassignedStudents(int roomId)
+		{
+			List<Student> students = new List<Student>();
+
+			using (SqlConnection connection = new SqlConnection(_connectionString))
+			{
+				string query = "SELECT S.student_number, S.room_id, S.first_name, S.last_name, S.phone_number, S.class " +
+							   "FROM DORMITORY AS D LEFT JOIN STUDENT AS S ON D.student_number = S.student_number AND D.room_id = @RoomId " +
+							   "WHERE D.student_number IS NULL ORDER BY first_name";
+
+				SqlCommand command = new(query, connection);
+
+				command.Parameters.AddWithValue("@RoomId", roomId);
+
+				command.Connection.Open();
+
+				SqlDataReader reader = command.ExecuteReader();
+
+				while (reader.Read())
+				{
+					Student student = ReadStudent(reader);
+					students.Add(student);
+				}
+				reader.Close();
+			}
+			return students;
+		}
+
+		public void AddStudentToDormitory(int studentNumber, int roomId)
+		{
+			using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                string query = "INSERT INTO DORMITORY (student_number, room_id) VALUES (@studentNumber, @roomId)";
                 SqlCommand command = new(query, connection);
 
-                command.Parameters.AddWithValue("@ActivityId", activityId);
+                command.Parameters.AddWithValue("@studentNumber", studentNumber);
+                command.Parameters.AddWithValue("@roomId", roomId);
 
-                // 3. Open the SQL connection
                 command.Connection.Open();
+				int nrOfRowsAffected = command.ExecuteNonQuery();
+				if (nrOfRowsAffected == 0)
+					throw new Exception("No records added!");
+			}
+		}
 
-                // 4. Execute SQL command
-                SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    Student student = ReadStudent(reader);
-                    students.Add(student);
-                }
-                reader.Close();
-            }
-            return students;
-        }
-
-        public List<Student> GetNonParticipants(int activityId)
-        {
-            List<Student> students = new();
-
-            //1. Create an SQL connection with a connection string
-            using (SqlConnection connection = new(_connectionString))
-            {
-                // 2. Create an SQL command with a query
-                string query = @"SELECT S.room_id, S.student_number, S.first_name, S.last_name, S.phone_number, S.class
-                                 FROM Student AS S
-                                 LEFT JOIN Participation AS P
-                                     ON S.student_number = P.student_number AND P.activity_id = @ActivityId
-                                 WHERE P.student_number IS NULL
-                                 ORDER BY S.last_name ASC;";
+		public void RemoveStudentFromDormitory(int studentNumber, int roomId)
+		{
+			using (SqlConnection connection = new SqlConnection(_connectionString))
+			{
+                string query = "DELETE FROM DORMITORY " +
+                               "WHERE student_number = @studentNumber AND room_id = @roomId";
                 SqlCommand command = new(query, connection);
 
-                command.Parameters.AddWithValue("@ActivityId", activityId);
+				command.Parameters.AddWithValue("@studentNumber", studentNumber);
+				command.Parameters.AddWithValue("@roomId", roomId);
 
-                // 3. Open the SQL connection
-                command.Connection.Open();
-
-                // 4. Execute SQL command
-                SqlDataReader reader = command.ExecuteReader();
-
-                while (reader.Read())
-                {
-                    Student student = ReadStudent(reader);
-                    students.Add(student);
-                }
-                reader.Close();
-            }
-            return students;
-        }
-    }
+				command.Connection.Open();
+				int nrOfRowsAffected = command.ExecuteNonQuery();
+				if (nrOfRowsAffected == 0)
+					throw new Exception("No records deleted!");
+			}
+		}
+	}
 }

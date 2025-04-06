@@ -10,7 +10,9 @@ namespace ProjectDatabases.Repositories
         void Add(Student student);
         void Update(Student student);
         void Delete(Student student);
-        List<Student> GetParticipants(int activityId);
-        List<Student> GetNonParticipants(int activityId);
-    }
+        List<Student> GetAssignedStudents(int roomId);
+        List<Student> GetUnassignedStudents(int roomId);
+		void AddStudentToDormitory(int studentNumber, int roomId);
+		void RemoveStudentFromDormitory(int studentNumber, int roomId);
+	}
 }
