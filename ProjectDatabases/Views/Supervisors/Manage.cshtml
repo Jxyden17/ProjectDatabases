@@ -1,40 +1,63 @@
 ﻿@model ProjectDatabases.Models.SupervisorsViewModel
-<h2>Manage Supervisors for @Model.Activity.ActivityName</h2>
-@{if (TempData["Confirmation"] != null)
+
+<h1>Supervisors for @Model.Activity.ActivityName</h1>
+@{
+    if (TempData["Confirmation"] != null)
     {
         <div class="alert alert-success">@TempData["Confirmation"]</div>
     }
- }
-<h3>Current Supervisors</h3>
-<ul>
-    @{
-        foreach (Teacher teacher in Model.Supervisors)
-        {
-            <li>
-                <strong>@teacher.FirstName @teacher.LastName</strong>
-                <form asp-action="RemoveSupervisor" method="post" style="display:inline;">
-                    <input type="hidden" name="activityId" value="@Model.Activity.ActivityId" />
-                    <input type="hidden" name="teacherId" value="@teacher.TeacherId" />
-                    <button type="submit" class="btn btn-danger">Remove</button>
-                </form>
-            </li>
+}
+<h2>Current Supervisors</h2>
+<table class="table table-hover text-center">
+    <thead>
+        <tr>
+            <th class="col-6" scope="col">Name</th>
+            <th class="col=6" scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (Teacher teacher in Model.Supervisors)
+            {
+                <tr>
+                    <td>@teacher.FirstName @teacher.LastName</td>
+                    <td>
+                        <form asp-action="RemoveSupervisor" method="post" style="display:inline;">
+                            <input type="hidden" name="activityId" value="@Model.Activity.ActivityId" />
+                            <input type="hidden" name="teacherId" value="@teacher.TeacherId" />
+                            <button type="submit" class="btn btn-outline-danger">Remove from activity</button>
+                        </form>
+                    </td>
+                </tr>
+            }
         }
-    }
-</ul>
+    </tbody>
+</table>
 
-<h3>Add a Supervisor</h3>
-<ul>
-    @{
-        foreach (Teacher teacher in Model.NonSupervisors)
-        {
-            <li>
-                <strong>@teacher.FirstName @teacher.LastName</strong>
-                <form asp-action="AddSupervisor" method="post" style="display:inline;">
-                    <input type="hidden" name="activityId" value="@Model.Activity.ActivityId" />
-                    <input type="hidden" name="teacherId" value="@teacher.TeacherId" />
-                    <button type="submit" class="btn btn-success">Add</button>
-                </form>
-            </li>
+<h2>Add a Supervisor</h2>
+<table class="table table-hover text-center">
+    <thead>
+        <tr>
+            <th class="col-6" scope="col">Name</th>
+            <th class="col=6" scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (Teacher teacher in Model.NonSupervisors)
+            {
+                <tr>
+                    <td>@teacher.FirstName @teacher.LastName</td>
+                    <td>
+                        <form asp-action="AddSupervisor" method="post" style="display:inline;">
+                            <input type="hidden" name="activityId" value="@Model.Activity.ActivityId" />
+                            <input type="hidden" name="teacherId" value="@teacher.TeacherId" />
+                            <button type="submit" class="btn btn-outline-success">Add to activity</button>
+                        </form>
+                    </td>
+                </tr>
+            }
         }
-    }
-</ul>
+    </tbody>
+</table>
+<a href="/Activities/Index">Back to Activities list</a>

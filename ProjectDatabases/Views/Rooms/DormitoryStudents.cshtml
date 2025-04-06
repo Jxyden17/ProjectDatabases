@@ -1,94 +1,90 @@
 ﻿@model ProjectDatabases.Models.DormitoryStudentsViewModel
 
 @{
-	ViewData["Title"] = "Dormitory Students";
+    ViewData["Title"] = "Dormitory Students";
 }
 
 @if (TempData["Confirmation"] != null)
 {
-	<div class="alert alert-success">
-		@TempData["Confirmation"]
-	</div>
+    <div class="alert alert-success">
+        @TempData["Confirmation"]
+    </div>
 }
 
 
-<h4>Manage Dormitory: </h4>
-<table class="table table-dark table-hover">
-	<thead>
-		<tr>
-			<th>Room Number</th>
-			<th>Capacity</th>
-			<th>Building</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>@Model.Room.RoomNumber</td>
-			<td>@Model.Room.Capacity</td>
-			<td>@Model.Room.Type</td>
-		</tr>
-	</tbody>
+<h1>Manage Dormitory</h1>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th>Room Number</th>
+            <th>Capacity</th>
+            <th>Type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Room.RoomNumber</td>
+            <td>@Model.Room.Capacity</td>
+            <td>@Model.Room.Type</td>
+        </tr>
+    </tbody>
 </table>
 
-<h3>Assigned students</h3>
-<table class="table table-dark table-hover">
-	<thead>
-		<tr>
-			<th>First Name</th>
-			<th>Last Name</th>
-			<th>Class</th>
-			<th>Actions</th>
-		</tr>
-	</thead>
-	<tbody>
-		@{
-			foreach (var student in Model.AssignedStudents)
-			{
-				<tr>
-					<td>@student.FirstName</td>
-					<td>@student.LastName</td>
-					<td>@student.ClassNumber</td>
-					<td>
-						<form method="post" asp-action="RemoveFromDormitory" asp-controller="Rooms">
-							<input type="hidden" name="roomId" value="@Model.Room.RoomID" />
-							<input type="hidden" name="studentNumber" value="@student.StudentNumber" />
-							<button type="submit" class="btn btn-danger">Remove</button>
-						</form>
-					</td>
-				</tr>
-			}
-		}
-	</tbody>
+<h2>Residing students</h2>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th class="col-4" scope="col">Name</th>
+            <th class="col-4" scope="col">Class</th>
+            <th class="col-4" scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var student in Model.AssignedStudents)
+            {
+                <tr>
+                    <td>@student.FirstName @student.LastName</td>
+                    <td>@student.ClassNumber</td>
+                    <td>
+                        <form method="post" asp-action="RemoveFromDormitory" asp-controller="Rooms">
+                            <input type="hidden" name="roomId" value="@Model.Room.RoomID" />
+                            <input type="hidden" name="studentNumber" value="@student.StudentNumber" />
+                            <button type="submit" class="btn btn-outline-danger">Remove from dormitory</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
 </table>
 
-<h3>Unassigned Students</h3>
-<table class="table table-dark table-hover">
-	<thead>
-		<tr>
-			<th>First Name</th>
-			<th>Last Name</th>
-			<th>Class</th>
-			<th>Actions</th>
-		</tr>
-	</thead>
-	<tbody>
-		@{
-			foreach (var student in Model.UnassignedStudents)
-			{
-				<tr>
-					<td>@student.FirstName</td>
-					<td>@student.LastName</td>
-					<td>@student.ClassNumber</td>
-					<td>
-						<form method="post" asp-action="AddToDormitory" asp-controller="Rooms">
-							<input type="hidden" name="roomId" value="@Model.Room.RoomID" />
-							<input type="hidden" name="studentNumber" value="@student.StudentNumber" />
-							<button type="submit" class="btn btn-success">Add</button>
-						</form>
-					</td>
-				</tr>
-			}
-		}
-	</tbody>
+<h2>Unassigned Students</h2>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th class="col-4" scope="col">Name</th>
+            <th class="col-4" scope="col">Class</th>
+            <th class="col-4" scope="col">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            foreach (var student in Model.UnassignedStudents)
+            {
+                <tr>
+                    <td>@student.FirstName @student.LastName</td>
+                    <td>@student.ClassNumber</td>
+                    <td>
+                        <form method="post" asp-action="AddToDormitory" asp-controller="Rooms">
+                            <input type="hidden" name="roomId" value="@Model.Room.RoomID" />
+                            <input type="hidden" name="studentNumber" value="@student.StudentNumber" />
+                            <button type="submit" class="btn btn-outline-success">Add to dormitory</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
 </table>
-<a href="/Rooms/Index">Back to list</a>
+<a href="/Rooms/Index">Back to Rooms list</a>

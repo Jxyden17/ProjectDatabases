@@ -3,34 +3,32 @@
     ViewData["Title"] = "Edit Teacher";
 }
 
-<h4>Edit Teacher</h4>
+<h4>@ViewData["Title"]</h4>
 <form action="/Teacher/Edit" method="POST">
     <input type="hidden" name="TeacherId" value="@Model?.TeacherId" />
     <input type="hidden" name="RoomId" value="@Model?.RoomId" />
-    <div class="form-group-py-2">
+
+    <div class="form-group py-2">
         <label for="FirstName">First Name:</label>
-
         <input type="text" id="FirstName" name="FirstName" class="form-control" required value="@Model?.FirstName" />
-    </div>  <div class="form-group-py-2">
-
-        <label for="LastName">Last Name:</label>
-
-        <input type="text" id="LastName" name="LastName" class="form-control" required value="@Model?.LastName" />
     </div>
 
+    <div class="form-group py-2">
+        <label for="LastName">Last Name:</label>
+        <input type="text" id="LastName" name="LastName" class="form-control" required value="@Model?.LastName" />
+    </div>
 
     <div class="form-group py-2">
         <label for="PhoneNumber">Phone number:</label>
         <input type="text" id="PhoneNumber" name="PhoneNumber" class="form-control" required value="@Model?.PhoneNumber" />
     </div>
 
-
     <div class="form-group py-2">
         <label for="Age">Age:</label>
         <input type="text" id="Age" name="Age" class="form-control" required value="@Model?.Age" />
     </div>
 
-    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="submit" class="btn btn-success">Save changes</button>
 </form>
 
-<a href="/Teacher/Index"> Back to list.</a>
+<a href="/Teacher/Index">Back to Teacher list</a>

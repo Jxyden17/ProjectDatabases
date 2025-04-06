@@ -5,10 +5,10 @@
     ViewData["Title"] = "Order";
 }
 <div class="">
-    <h2>Place an Order</h2>
+    <h1>Place an Order</h1>
 
     <form id="orderForm"  method="post">
-        <div class="form-group">
+        <div class="form-group py-2">
             <label for="SelectedStudentId">Select Student:</label>
             <select asp-for="SelectedStudentId" class="form-control">
                 <option value="">-- Choose Student --</option>
@@ -19,7 +19,7 @@
             </select>
         </div>
 
-        <div class="form-group">
+        <div class="form-group py-2">
             <label for="SelectedDrinkId">Select Drink:</label>
             <select asp-for="SelectedDrinkId" class="form-control">
                 <option value="">-- Choose Drink --</option>
@@ -30,7 +30,7 @@
             </select>
         </div>
 
-        <div class="form-group">
+        <div class="form-group py-2">
             <label for="DrinkAmount">Enter Amount:</label>
             <input asp-for="DrinkAmount" type="number" class="form-control" min="1" required />
         </div>

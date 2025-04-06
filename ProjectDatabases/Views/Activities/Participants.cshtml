@@ -22,18 +22,16 @@
     <table class="table table-hover text-center">
         <thead>
             <tr>
-                <th class="col-3" scope="col">First Name</th>
-                <th class="col-3" scope="col">Last Name</th>
-                <th class="col-3" scope="col">Class</th>
-                <th class="col-3" scope="col">Action</th>
+                <th class="col-4" scope="col">Name</th>
+                <th class="col-4" scope="col">Class</th>
+                <th class="col-4" scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var student in Model.Participants)
             {
                 <tr>
-                    <td>@student.FirstName</td>
-                    <td>@student.LastName</td>
+                    <td>@student.FirstName @student.LastName</td>
                     <td>@student.ClassNumber</td>
                     <td>
                         <form method="post" asp-action="RemoveParticipant" asp-controller="Activities">
@@ -57,18 +55,16 @@ else
     <table class="table table-hover text-center">
         <thead>
             <tr>
-                <th class="col-3" scope="col">First Name</th>
-                <th class="col-3" scope="col">Last Name</th>
-                <th class="col-3" scope="col">Class</th>
-                <th class="col-3" scope="col">Action</th>
+                <th class="col-4" scope="col">Name</th>
+                <th class="col-4" scope="col">Class</th>
+                <th class="col-4" scope="col">Action</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var student in Model.NonParticipants)
             {
                 <tr>
-                    <td>@student.FirstName</td>
-                    <td>@student.LastName</td>
+                    <td>@student.FirstName @student.LastName</td>
                     <td>@student.ClassNumber</td>
                     <td>
                         <form method="post" asp-action="AddParticipant" asp-controller="Activities">

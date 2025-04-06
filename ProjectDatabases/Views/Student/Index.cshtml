@@ -1,42 +1,47 @@
 ﻿@model List<ProjectDatabases.Models.Student>
 
 @{
-    ViewData["Title"] = "student Page";
+    ViewData["Title"] = "Students";
 }
+<h1>@ViewData["Title"]</h1>
 <form class="row my-4" action="/Student/Index" method="GET">
-    <input class="form-control col" type="search" id="search" name="search" placeholder="Search for an student..." aria-label="Search for an student" value="@ViewData["Search"]" />
+    <input class="form-control col" type="search" id="search" name="search" placeholder="Search for a student by last name..." aria-label="Search for an student" value="@ViewData["Search"]" />
     <button class="btn btn-outline-success col-auto px-4 mx-2" type="submit">Search</button>
 </form>
 <div class="table-responsive">
-<a href="/student/Create">Create New</a>
-    <table class="table table-hover">
-    <thead class="thead-dark">
-        <tr>
-            <th class="col">room_id</th>
-            <th class="col">first_name</th>
-            <th class="col">last_name</th>
-            <th class="col">phone_number</th>
-            <th class="col">class</th>
-            <th class="col">Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        @{
-            foreach (var student in Model)
-            {
-                <tr>
-                <th scope="row">@student.RoomId</th>
-                <td>@student.FirstName</td>
-                <td>@student.LastName</td>
-                <td>@student.PhoneNumber</td>
-                <td>@student.ClassNumber</td>
-                <td>
-                        <a href="/Student/Edit/@student.StudentNumber">Edit</a>
-                        <a href="/Student/Delete/@student.StudentNumber">Delete</a>
-                </td>
-                </tr>
+    <table class="table table-hover text-center">
+        <thead>
+            <tr class="bg-primary text-light">
+                <th class="col">Room Id</th>
+                <th class="col">First Name</th>
+                <th class="col">Last Name</th>
+                <th class="col">Phone Number</th>
+                <th class="col">Class</th>
+                <th class="col">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                foreach (var student in Model)
+                {
+                    <tr title="@($"{student.FirstName} {student.LastName}")">
+                        <th scope="row">@student.RoomId</th>
+                        <td>@student.FirstName</td>
+                        <td>@student.LastName</td>
+                        <td>@student.PhoneNumber</td>
+                        <td>@student.ClassNumber</td>
+                        <td>
+                            <div class="btn-group" role="group">
+                                <a href="/Student/Edit/@student.StudentNumber" class="btn btn-outline-warning">Edit</a>
+                                <a href="/Student/Delete/@student.StudentNumber" class="btn btn-outline-danger">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
             }
-        }
-    </tbody>
-</table>
+        </tbody>
+    </table>
+</div>
+<div class="row justify-content-center">
+    <a href="/Student/Create" class="btn btn-lg btn-primary col-md-auto">Add student</a>
 </div>

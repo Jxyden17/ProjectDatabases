@@ -11,20 +11,20 @@
 <form action="/Rooms/Create" method="POST">
 	<div class="form-group py-2">
 		<label for="RoomNumber">Room Number:</label>
-		<input type="text" id="RoomNumber" name="RoomNumber" class="form-control" required value="@Model?.RoomNumber" />
+		<input type="text" id="RoomNumber" name="RoomNumber" class="form-control" placeholder="Enter room number..." required value="@Model?.RoomNumber" />
 	</div>
 
 	<div class="form-group py-2">
 		<label for="Capacity">Capacity:</label>
-		<input type="number" id="Capacity" name="Capacity" class="form-control" min="1" max="10" required value="@Model?.Capacity" />
+		<input type="number" id="Capacity" name="Capacity" class="form-control" placeholder="Enter room capacity between 1 and 10..." min="1" max="10" required value="@Model?.Capacity" />
 	</div>
 
 	<div class="form-group py-2">
 		<label for="Type">Type:</label>
-		<input type="text" id="Type" name="Type" class="form-control" required value="@Model?.Type" />
+		<input type="text" id="Type" name="Type" class="form-control" placeholder="Enter room type (student or lecturer)..." required value="@Model?.Type" />
 	</div>
 
-	<button type="submit" class="btn btn-primary">Add</button>
+	<button type="submit" class="btn btn-primary">Add room</button>
 </form>
 
-<a href="/Rooms/Index">Back to list</a>
+<a href="/Rooms/Index">Back to Rooms list</a>

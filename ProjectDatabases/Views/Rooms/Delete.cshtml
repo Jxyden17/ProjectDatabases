@@ -6,7 +6,7 @@
 
 <h4>@errorMessage</h4>
 
-<h4>Delete Room</h4>
+<h1>@ViewData["Title"]</h1>
 <form action="/Rooms/Delete" method="POST">
 	<input hidden type="number" name="RoomID" value="@Model?.RoomID" />
 
@@ -25,7 +25,7 @@
 		<input type="text" id="Type" name="Type" class="form-control" readonly value="@Model?.Type" />
 	</div>
 
-	<button type="submit" class="btn btn-primary">Delete</button>
+	<button type="submit" class="btn btn-danger">Delete</button>
 </form>
 
-<a href="/Rooms/Index">Back to list</a>
+<a href="/Rooms/Index">Back to Rooms list</a>
