@@ -267,7 +267,7 @@ namespace ProjectDatabases.Repositories
 			using (SqlConnection connection = new SqlConnection(_connectionString))
 			{
 				string query = "SELECT S.student_number, S.room_id, S.first_name, S.last_name, S.phone_number, S.class " +
-							   "FROM DORMITORY AS D LEFT JOIN STUDENT AS S ON D.student_number = S.student_number AND D.room_id = @RoomId " +
+							   "FROM STUDENT AS S LEFT JOIN DORMITORY AS D ON D.student_number = S.student_number AND D.room_id = @RoomId " +
 							   "WHERE D.student_number IS NULL ORDER BY first_name";
 
 				SqlCommand command = new(query, connection);
