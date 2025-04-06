@@ -160,5 +160,99 @@ namespace ProjectDatabases.Repositories
                     throw new Exception("No records deleted!");
             }
         }
-    }
+
+        public List<Student> GetAssignedStudents(int roomId)
+        {
+			List<Student> students = new List<Student>();
+
+            using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                string query = "SELECT S.student_number, S.room_id, S.first_name, S.last_name, S.phone_number, S.class " +
+                               "FROM DORMITORY AS D " +
+                               "JOIN STUDENT AS S ON D.student_number = S.student_number " +
+                               "WHERE D.room_id = @RoomId ORDER BY first_name ";
+
+				SqlCommand command = new(query, connection);
+
+				command.Parameters.AddWithValue("@RoomId", roomId);
+
+				command.Connection.Open();
+
+				SqlDataReader reader = command.ExecuteReader();
+
+				while (reader.Read())
+				{
+					Student student = ReadStudent(reader);
+					students.Add(student);
+				}
+				reader.Close();
+			}
+			return students;
+		}
+
+
+
+		public List<Student> GetUnassignedStudents(int roomId)
+		{
+			List<Student> students = new List<Student>();
+
+			using (SqlConnection connection = new SqlConnection(_connectionString))
+			{
+				string query = "SELECT S.student_number, S.room_id, S.first_name, S.last_name, S.phone_number, S.class " +
+							   "FROM DORMITORY AS D LEFT JOIN STUDENT AS S ON D.student_number = S.student_number AND D.room_id = @RoomId " +
+							   "WHERE D.student_number IS NULL ORDER BY first_name";
+
+				SqlCommand command = new(query, connection);
+
+				command.Parameters.AddWithValue("@RoomId", roomId);
+
+				command.Connection.Open();
+
+				SqlDataReader reader = command.ExecuteReader();
+
+				while (reader.Read())
+				{
+					Student student = ReadStudent(reader);
+					students.Add(student);
+				}
+				reader.Close();
+			}
+			return students;
+		}
+
+		public void AddStudentToDormitory(int studentNumber, int roomId)
+		{
+			using (SqlConnection connection = new SqlConnection(_connectionString))
+            {
+                string query = "INSERT INTO DORMITORY (student_number, room_id) VALUES (@studentNumber, @roomId)";
+                SqlCommand command = new(query, connection);
+
+                command.Parameters.AddWithValue("@studentNumber", studentNumber);
+                command.Parameters.AddWithValue("@roomId", roomId);
+
+                command.Connection.Open();
+				int nrOfRowsAffected = command.ExecuteNonQuery();
+				if (nrOfRowsAffected == 0)
+					throw new Exception("No records added!");
+			}
+		}
+
+		public void RemoveStudentFromDormitory(int studentNumber, int roomId)
+		{
+			using (SqlConnection connection = new SqlConnection(_connectionString))
+			{
+                string query = "DELETE FROM DORMITORY " +
+                               "WHERE student_number = @studentNumber AND room_id = @roomId";
+                SqlCommand command = new(query, connection);
+
+				command.Parameters.AddWithValue("@studentNumber", studentNumber);
+				command.Parameters.AddWithValue("@roomId", roomId);
+
+				command.Connection.Open();
+				int nrOfRowsAffected = command.ExecuteNonQuery();
+				if (nrOfRowsAffected == 0)
+					throw new Exception("No records deleted!");
+			}
+		}
+	}
 }

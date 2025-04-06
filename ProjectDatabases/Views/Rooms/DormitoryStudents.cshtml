@@ -1,0 +1,94 @@
+﻿@model ProjectDatabases.Models.DormitoryStudentsViewModel
+
+@{
+	ViewData["Title"] = "Dormitory Students";
+}
+
+@if (TempData["Confirmation"] != null)
+{
+	<div class="alert alert-success">
+		@TempData["Confirmation"]
+	</div>
+}
+
+
+<h4>Manage Dormitory: </h4>
+<table class="table table-dark table-hover">
+	<thead>
+		<tr>
+			<th>Room Number</th>
+			<th>Capacity</th>
+			<th>Building</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>@Model.Room.RoomNumber</td>
+			<td>@Model.Room.Capacity</td>
+			<td>@Model.Room.Type</td>
+		</tr>
+	</tbody>
+</table>
+
+<h3>Assigned students</h3>
+<table class="table table-dark table-hover">
+	<thead>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Class</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		@{
+			foreach (var student in Model.AssignedStudents)
+			{
+				<tr>
+					<td>@student.FirstName</td>
+					<td>@student.LastName</td>
+					<td>@student.ClassNumber</td>
+					<td>
+						<form method="post" action="RemoveFromDormitory">
+							<input type="hidden" name="roomId" value="@Model.Room.RoomID" />
+							<input type="hidden" name="studentId" value="@student.StudentNumber" />
+							<button type="submit" class="btn btn-danger">Remove</button>
+						</form>
+					</td>
+				</tr>
+			}
+		}
+	</tbody>
+</table>
+
+<h3>Unassigned Students</h3>
+<table class="table table-dark table-hover">
+	<thead>
+		<tr>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Class</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<tbody>
+		@{
+			foreach (var student in Model.UnassignedStudents)
+			{
+				<tr>
+					<td>@student.FirstName</td>
+					<td>@student.LastName</td>
+					<td>@student.ClassNumber</td>
+					<td>
+						<form method="post" asp-action="AddToDormitory">
+							<input type="hidden" name="roomId" value="@Model.Room.RoomID" />
+							<input type="hidden" name="studentId" value="@student.StudentNumber" />
+							<button type="submit" class="btn btn-success">Add</button>
+						</form>
+					</td>
+				</tr>
+			}
+		}
+	</tbody>
+</table>
+<a href="/Rooms/Index">Back to list</a>
