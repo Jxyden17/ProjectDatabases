@@ -292,11 +292,11 @@ namespace ProjectDatabases.Repositories
 		{
 			using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = "INSERT INTO DORMITORY (student_number, room_id) VALUES (@studentNumber, @roomId)";
+                string query = "INSERT INTO DORMITORY (student_number, room_id) VALUES (@studentNumber, @RoomId)";
                 SqlCommand command = new(query, connection);
 
                 command.Parameters.AddWithValue("@studentNumber", studentNumber);
-                command.Parameters.AddWithValue("@roomId", roomId);
+                command.Parameters.AddWithValue("@RoomId", roomId);
 
                 command.Connection.Open();
 				int nrOfRowsAffected = command.ExecuteNonQuery();
@@ -310,11 +310,11 @@ namespace ProjectDatabases.Repositories
 			using (SqlConnection connection = new SqlConnection(_connectionString))
 			{
                 string query = "DELETE FROM DORMITORY " +
-                               "WHERE student_number = @studentNumber AND room_id = @roomId";
+                               "WHERE student_number = @studentNumber AND room_id = @RoomId";
                 SqlCommand command = new(query, connection);
 
 				command.Parameters.AddWithValue("@studentNumber", studentNumber);
-				command.Parameters.AddWithValue("@roomId", roomId);
+				command.Parameters.AddWithValue("@RoomId", roomId);
 
 				command.Connection.Open();
 				int nrOfRowsAffected = command.ExecuteNonQuery();

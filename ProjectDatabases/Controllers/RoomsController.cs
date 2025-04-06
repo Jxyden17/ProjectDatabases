@@ -98,11 +98,11 @@ namespace ProjectDatabases.Controllers
 			}
 		}
 
-		public IActionResult DormitoryStudents(int? Id)
+		public IActionResult DormitoryStudents(int? id)
 		{
-			Room? Room = _roomRepository.GetById((int)Id);
-			List<Student>AssignedStudents = _studentRepository.GetAssignedStudents((int)Id);
-			List<Student>UnassignedStudents = _studentRepository.GetUnassignedStudents((int)Id);
+			Room? Room = _roomRepository.GetById((int)id);
+			List<Student>AssignedStudents = _studentRepository.GetAssignedStudents((int)id);
+			List<Student>UnassignedStudents = _studentRepository.GetUnassignedStudents((int)id);
 
 			var viewModel = new DormitoryStudentsViewModel()
 			{

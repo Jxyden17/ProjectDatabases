@@ -49,9 +49,9 @@
 					<td>@student.LastName</td>
 					<td>@student.ClassNumber</td>
 					<td>
-						<form method="post" action="RemoveFromDormitory">
+						<form method="post" asp-action="RemoveFromDormitory" asp-controller="Rooms">
 							<input type="hidden" name="roomId" value="@Model.Room.RoomID" />
-							<input type="hidden" name="studentId" value="@student.StudentNumber" />
+							<input type="hidden" name="studentNumber" value="@student.StudentNumber" />
 							<button type="submit" class="btn btn-danger">Remove</button>
 						</form>
 					</td>
@@ -80,9 +80,9 @@
 					<td>@student.LastName</td>
 					<td>@student.ClassNumber</td>
 					<td>
-						<form method="post" asp-action="AddToDormitory">
+						<form method="post" asp-action="AddToDormitory" asp-controller="Rooms">
 							<input type="hidden" name="roomId" value="@Model.Room.RoomID" />
-							<input type="hidden" name="studentId" value="@student.StudentNumber" />
+							<input type="hidden" name="studentNumber" value="@student.StudentNumber" />
 							<button type="submit" class="btn btn-success">Add</button>
 						</form>
 					</td>
