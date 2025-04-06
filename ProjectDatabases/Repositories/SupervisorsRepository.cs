@@ -23,7 +23,8 @@ namespace ProjectDatabases.Repositories
             List<Supervisors> supervisors = new List<Supervisors>();
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = "SELECT teacher_id, activity_id FROM SUPERVISORS";
+                string query = @"SELECT teacher_id, activity_id
+                                 FROM SUPERVISORS";
                 SqlCommand command = new SqlCommand(query, connection);
 
                 command.Connection.Open();
@@ -44,11 +45,13 @@ namespace ProjectDatabases.Repositories
             Supervisors? supervisor = null;
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = "SELECT teacher_id, activity_id FROM SUPERVISORS WHERE teacher_id = @teacherId AND activity_id = @activityId";
+                string query = @"SELECT teacher_id, activity_id
+                                 FROM SUPERVISORS
+                                 WHERE teacher_id = @TeacherId AND activity_id = @ActivityId";
 
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@teacherId", teacherId);
-                command.Parameters.AddWithValue("@activityId", activityId);
+                command.Parameters.AddWithValue("@TeacherId", teacherId);
+                command.Parameters.AddWithValue("@ActivityId", activityId);
 
                 command.Connection.Open();
 
@@ -68,14 +71,13 @@ namespace ProjectDatabases.Repositories
             List<Teacher> teachers = new List<Teacher>();
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = @"
-                    SELECT TEACHER.teacher_id, TEACHER.first_name, TEACHER.last_name
-                    FROM TEACHER
-                    JOIN SUPERVISOR ON TEACHER.teacher_id = SUPERVISOR.teacher_id
-                    WHERE SUPERVISOR.activity_id = @activityId";
+                string query = @"SELECT TEACHER.teacher_id, TEACHER.first_name, TEACHER.last_name
+                                 FROM TEACHER
+                                 JOIN SUPERVISOR ON TEACHER.teacher_id = SUPERVISOR.teacher_id
+                                 WHERE SUPERVISOR.activity_id = @ActivityId";
 
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@activityId", activityId);
+                command.Parameters.AddWithValue("@ActivityId", activityId);
 
                 command.Connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -99,16 +101,14 @@ namespace ProjectDatabases.Repositories
 
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = @"
-                SELECT TEACHER.teacher_id, TEACHER.first_name,TEACHER.last_name
-                FROM TEACHER
-                LEFT JOIN SUPERVISOR 
-                ON TEACHER.teacher_id = SUPERVISOR.teacher_id 
-                AND SUPERVISOR.activity_id = @activityId
-                WHERE SUPERVISOR.teacher_id IS NULL";
+                string query = @"SELECT TEACHER.teacher_id, TEACHER.first_name,TEACHER.last_name
+                                 FROM TEACHER
+                                 LEFT JOIN SUPERVISOR
+                                     ON TEACHER.teacher_id = SUPERVISOR.teacher_id AND SUPERVISOR.activity_id = @ActivityId
+                                 WHERE SUPERVISOR.teacher_id IS NULL";
 
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@activityId", activityId);
+                command.Parameters.AddWithValue("@ActivityId", activityId);
 
                 command.Connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -135,11 +135,12 @@ namespace ProjectDatabases.Repositories
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = "INSERT INTO SUPERVISOR (activity_id, teacher_id) VALUES (@activityId, @teacherId)";
+                string query = @"INSERT INTO SUPERVISOR (activity_id, teacher_id)
+                                 VALUES (@ActivityId, @TeacherId)";
                 SqlCommand command = new SqlCommand(query, connection);
 
-                command.Parameters.AddWithValue("@activityId", activityId);
-                command.Parameters.AddWithValue("@teacherId", teacherId);
+                command.Parameters.AddWithValue("@ActivityId", activityId);
+                command.Parameters.AddWithValue("@TeacherId", teacherId);
 
                 connection.Open();
                 command.ExecuteNonQuery();
@@ -150,11 +151,12 @@ namespace ProjectDatabases.Repositories
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {   
-                string query = "DELETE FROM SUPERVISOR WHERE activity_id = @activityId AND teacher_id = @teacherId";
+                string query = @"DELETE FROM SUPERVISOR
+                                 WHERE activity_id = @ActivityId AND teacher_id = @TeacherId";
                 SqlCommand command = new SqlCommand(query, connection);
 
-                command.Parameters.AddWithValue("@activityId", activityId);
-                command.Parameters.AddWithValue("@teacherId", teacherId);
+                command.Parameters.AddWithValue("@ActivityId", activityId);
+                command.Parameters.AddWithValue("@TeacherId", teacherId);
 
                 connection.Open();
                 command.ExecuteNonQuery();

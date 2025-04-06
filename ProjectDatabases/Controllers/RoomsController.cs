@@ -45,13 +45,13 @@ namespace ProjectDatabases.Controllers
 		}
 
 		[HttpGet]
-		public ActionResult Edit(int? Id)
+		public ActionResult Edit(int? id)
 		{
-			if (Id == null)
+			if (id == null)
 			{
 				return NotFound();
 			}
-			Room? room = _roomRepository.GetById((int)Id);
+			Room? room = _roomRepository.GetById((int)id);
 			return View(room);
 		}
 		
@@ -72,13 +72,13 @@ namespace ProjectDatabases.Controllers
 		}
 
 		[HttpGet]
-		public ActionResult Delete(int? Id)
+		public ActionResult Delete(int? id)
 		{
-			if (Id == null)
+			if (id == null)
 			{
 				return NotFound();
 			}
-			Room? room = _roomRepository.GetById((int)Id);
+			Room? room = _roomRepository.GetById((int)id);
 			return View(room);
 		}
 
@@ -100,13 +100,13 @@ namespace ProjectDatabases.Controllers
 
 		public IActionResult DormitoryStudents(int? id)
 		{
-			Room? Room = _roomRepository.GetById((int)id);
+			Room? room = _roomRepository.GetById((int)id);
 			List<Student>AssignedStudents = _studentRepository.GetAssignedStudents((int)id);
 			List<Student>UnassignedStudents = _studentRepository.GetUnassignedStudents((int)id);
 
 			var viewModel = new DormitoryStudentsViewModel()
 			{
-				Room = Room,
+				Room = room,
 				AssignedStudents = AssignedStudents,
 				UnassignedStudents = UnassignedStudents
 			};

@@ -30,7 +30,9 @@ namespace ProjectDatabases.Repositories
             List<Teacher> teachers = new List<Teacher>();
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = "SELECT teacher_id, room_id, first_name, last_name, phone_number, age FROM TEACHER ORDER BY last_name";
+                string query = @"SELECT teacher_id, room_id, first_name, last_name, phone_number, age
+                                 FROM TEACHER
+                                 ORDER BY last_name";
                 SqlCommand command = new SqlCommand(query, connection);
 
                 command.Connection.Open();
@@ -46,14 +48,16 @@ namespace ProjectDatabases.Repositories
             return teachers;
         }
 
-        public Teacher? GetById(int TeacherId)
+        public Teacher? GetById(int teacherId)
         {
-            Teacher teacher = null;
+            Teacher? teacher = null;
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = "SELECT teacher_id, room_id, first_name, last_name, phone_number, age FROM TEACHER WHERE teacher_id = @teacher_id";
+                string query = @"SELECT teacher_id, room_id, first_name, last_name, phone_number, age
+                                 FROM TEACHER
+                                 WHERE teacher_id = @TeacherId";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@teacher_id", TeacherId);
+                command.Parameters.AddWithValue("@TeacherId", teacherId);
 
                 command.Connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -73,15 +77,15 @@ namespace ProjectDatabases.Repositories
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = $"INSERT INTO TEACHER (room_id, first_name, last_name, phone_number, age) " +
-                               "VALUES (@RoomId, @firstName, @lastName, @PhoneNumber, @Age); " +
-                               "SELECT SCOPE_IDENTITY();";
+                string query = @"INSERT INTO TEACHER (room_id, first_name, last_name, phone_number, age)
+                                 VALUES (@RoomId, @FirstName, @LastName, @PhoneNumber, @Age);
+                                 SELECT SCOPE_IDENTITY();";
 
                 SqlCommand command = new SqlCommand(query, connection);
 
                 command.Parameters.AddWithValue("@RoomId", teacher.RoomId);
-                command.Parameters.AddWithValue("@firstName", teacher.FirstName);
-                command.Parameters.AddWithValue("@lastName", teacher.LastName);
+                command.Parameters.AddWithValue("@FirstName", teacher.FirstName);
+                command.Parameters.AddWithValue("@LastName", teacher.LastName);
                 command.Parameters.AddWithValue("@PhoneNumber", teacher.PhoneNumber);
                 command.Parameters.AddWithValue("@Age", teacher.Age);
 
@@ -94,11 +98,14 @@ namespace ProjectDatabases.Repositories
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = "UPDATE TEACHER SET first_name = @firstName, last_name = @lastName, phone_number = @PhoneNumber , " + "age = @Age WHERE teacher_id = @TeacherId";
+                string query = @"UPDATE TEACHER
+                                 SET first_name = @FirstName, last_name = @LastName, phone_number = @PhoneNumber , age = @Age
+                                 WHERE teacher_id = @TeacherId";
                 SqlCommand command = new SqlCommand(query, connection);
+
                 command.Parameters.AddWithValue("@TeacherId", teacher.TeacherId);
-                command.Parameters.AddWithValue("@firstName", teacher.FirstName);
-                command.Parameters.AddWithValue("@lastName", teacher.LastName); 
+                command.Parameters.AddWithValue("@FirstName", teacher.FirstName);
+                command.Parameters.AddWithValue("@LastName", teacher.LastName); 
                 command.Parameters.AddWithValue("@PhoneNumber", teacher.PhoneNumber);
                 command.Parameters.AddWithValue("@Age", teacher.Age);
 
@@ -109,14 +116,15 @@ namespace ProjectDatabases.Repositories
             }
         }
 
-        public void Delete(int TeacherId)
+        public void Delete(int teacherId)
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = $"DELETE FROM TEACHER WHERE teacher_id = @Id";
+                string query = @"DELETE FROM TEACHER
+                                 WHERE teacher_id = @TeacherId";
 
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@Id", TeacherId);
+                command.Parameters.AddWithValue("@TeacherId", teacherId);
 
                 command.Connection.Open();
                 int nrOfRowsAffected = command.ExecuteNonQuery();

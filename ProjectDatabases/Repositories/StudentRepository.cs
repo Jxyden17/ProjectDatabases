@@ -15,7 +15,9 @@ namespace ProjectDatabases.Repositories
 
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = "SELECT student_number, room_id, first_name, last_name, phone_number, class FROM STUDENT ORDER BY last_name";
+                string query = @"SELECT student_number, room_id, first_name, last_name, phone_number, class
+                                 FROM STUDENT
+                                 ORDER BY last_name";
                 SqlCommand command = new SqlCommand(query, connection);
 
                 command.Connection.Open();
@@ -82,10 +84,12 @@ namespace ProjectDatabases.Repositories
             Student? student = null;
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = "SELECT student_number, room_id, first_name, last_name, phone_number, class FROM STUDENT WHERE student_number = @studentId";
+                string query = @"SELECT student_number, room_id, first_name, last_name, phone_number, class
+                                 FROM STUDENT
+                                 WHERE student_number = @StudentId";
 
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@studentId", studentId);
+                command.Parameters.AddWithValue("@StudentId", studentId);
 
                 connection.Open();
 
@@ -104,9 +108,9 @@ namespace ProjectDatabases.Repositories
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = $"INSERT INTO STUDENT ( room_id, first_name, last_name, phone_number, class) " +
-                               "VALUES (@RoomId, @FirstName, @Lastname, @PhoneNumber, @ClassNumber); " +
-                               "SELECT SCOPE_IDENTITY();";
+                string query = @"INSERT INTO STUDENT (room_id, first_name, last_name, phone_number, class)
+                                 VALUES (@RoomId, @FirstName, @Lastname, @PhoneNumber, @ClassNumber);
+                                 SELECT SCOPE_IDENTITY();";
 
                 SqlCommand command = new SqlCommand(query, connection);
 
@@ -126,15 +130,16 @@ namespace ProjectDatabases.Repositories
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = "UPDATE STUDENT SET room_id = @RoomId, first_name = @firstName, last_name = @lastName, phone_number = @phoneNumber, class= @ClassNumber " +
-                               "WHERE student_number = @studentNumber";
+                string query = @"UPDATE STUDENT
+                                 SET room_id = @RoomId, first_name = @FirstName, last_name = @LastName, phone_number = @PhoneNumber, class = @ClassNumber
+                                 WHERE student_number = @StudentNumber";
 
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@studentNumber", student.StudentNumber);
+                command.Parameters.AddWithValue("@StudentNumber", student.StudentNumber);
                 command.Parameters.AddWithValue("@RoomId", student.RoomId);
-                command.Parameters.AddWithValue("@firstName", student.FirstName);
-                command.Parameters.AddWithValue("@lastName", student.LastName);
-                command.Parameters.AddWithValue("@phoneNumber", student.PhoneNumber);
+                command.Parameters.AddWithValue("@FirstName", student.FirstName);
+                command.Parameters.AddWithValue("@LastName", student.LastName);
+                command.Parameters.AddWithValue("@PhoneNumber", student.PhoneNumber);
                 command.Parameters.AddWithValue("@ClassNumber", student.ClassNumber);
 
                 command.Connection.Open();
@@ -149,10 +154,11 @@ namespace ProjectDatabases.Repositories
         {
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = $"DELETE FROM STUDENT WHERE student_number = @studentNumber";
+                string query = @"DELETE FROM STUDENT
+                                 WHERE student_number = @StudentNumber";
 
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@studentNumber", student.StudentNumber);
+                command.Parameters.AddWithValue("@StudentNumber", student.StudentNumber);
 
                 command.Connection.Open();
                 int nrOfRowsAffected = command.ExecuteNonQuery();
@@ -235,10 +241,10 @@ namespace ProjectDatabases.Repositories
 
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = "SELECT S.student_number, S.room_id, S.first_name, S.last_name, S.phone_number, S.class " +
-                               "FROM DORMITORY AS D " +
-                               "JOIN STUDENT AS S ON D.student_number = S.student_number " +
-                               "WHERE D.room_id = @RoomId ORDER BY first_name ";
+                string query = @"SELECT S.student_number, S.room_id, S.first_name, S.last_name, S.phone_number, S.class
+                                 FROM DORMITORY AS D
+                                 JOIN STUDENT AS S ON D.student_number = S.student_number
+                                 WHERE D.room_id = @RoomId ORDER BY first_name";
 
 				SqlCommand command = new(query, connection);
 
@@ -266,9 +272,12 @@ namespace ProjectDatabases.Repositories
 
 			using (SqlConnection connection = new SqlConnection(_connectionString))
 			{
-				string query = "SELECT S.student_number, S.room_id, S.first_name, S.last_name, S.phone_number, S.class " +
-							   "FROM STUDENT AS S LEFT JOIN DORMITORY AS D ON D.student_number = S.student_number AND D.room_id = @RoomId " +
-							   "WHERE D.student_number IS NULL ORDER BY first_name";
+				string query = @"SELECT S.student_number, S.room_id, S.first_name, S.last_name, S.phone_number, S.class
+							     FROM STUDENT AS S
+                                 LEFT JOIN DORMITORY AS D
+                                 ON D.student_number = S.student_number AND D.room_id = @RoomId
+							     WHERE D.student_number IS NULL
+                                 ORDER BY first_name";
 
 				SqlCommand command = new(query, connection);
 
@@ -292,10 +301,11 @@ namespace ProjectDatabases.Repositories
 		{
 			using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = "INSERT INTO DORMITORY (student_number, room_id) VALUES (@studentNumber, @RoomId)";
+                string query = @"INSERT INTO DORMITORY (student_number, room_id)
+                                 VALUES (@StudentNumber, @RoomId)";
                 SqlCommand command = new(query, connection);
 
-                command.Parameters.AddWithValue("@studentNumber", studentNumber);
+                command.Parameters.AddWithValue("@StudentNumber", studentNumber);
                 command.Parameters.AddWithValue("@RoomId", roomId);
 
                 command.Connection.Open();
@@ -309,11 +319,11 @@ namespace ProjectDatabases.Repositories
 		{
 			using (SqlConnection connection = new SqlConnection(_connectionString))
 			{
-                string query = "DELETE FROM DORMITORY " +
-                               "WHERE student_number = @studentNumber AND room_id = @RoomId";
+                string query = @"DELETE FROM DORMITORY
+                                 WHERE student_number = @StudentNumber AND room_id = @RoomId";
                 SqlCommand command = new(query, connection);
 
-				command.Parameters.AddWithValue("@studentNumber", studentNumber);
+				command.Parameters.AddWithValue("@StudentNumber", studentNumber);
 				command.Parameters.AddWithValue("@RoomId", roomId);
 
 				command.Connection.Open();

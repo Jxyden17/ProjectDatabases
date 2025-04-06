@@ -22,7 +22,9 @@ namespace ProjectDatabases.Repositories
                     try
                     {
                         // Step 1: Check current stock
-                        string checkStockQuery = @"SELECT stock FROM DRINK WHERE drink_id = @DrinkId;";
+                        string checkStockQuery = @"SELECT stock
+                                                   FROM DRINK
+                                                   WHERE drink_id = @DrinkId;";
                         using (SqlCommand checkStockCommand = new(checkStockQuery, connection, transaction))
                         {
                             checkStockCommand.Parameters.AddWithValue("@DrinkId", order.SelectedDrinkId);
@@ -35,7 +37,8 @@ namespace ProjectDatabases.Repositories
                         }
 
                         // Step 2: Insert the order
-                        string insertOrderQuery = @"INSERT INTO [ORDER] (student_number, drink_id, amount) VALUES (@StudentNumber, @DrinkId, @Amount);";
+                        string insertOrderQuery = @"INSERT INTO [ORDER] (student_number, drink_id, amount)
+                                                    VALUES (@StudentNumber, @DrinkId, @Amount);";
 
                         using (SqlCommand insertOrderCommand = new(insertOrderQuery, connection, transaction))
                         {
@@ -46,7 +49,9 @@ namespace ProjectDatabases.Repositories
                         }
 
                         // Step 3: Decrease stock only if enough is available
-                        string updateStockQuery = @"UPDATE DRINK SET stock = stock - @Amount WHERE drink_id = @DrinkId;";
+                        string updateStockQuery = @"UPDATE DRINK
+                                                    SET stock = stock - @Amount
+                                                    WHERE drink_id = @DrinkId;";
 
                         using (SqlCommand updateStockCommand = new(updateStockQuery, connection, transaction))
                         {

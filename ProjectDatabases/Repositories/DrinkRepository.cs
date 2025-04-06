@@ -15,7 +15,9 @@ namespace ProjectDatabases.Repositories
 
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = "SELECT drink_id, name , isAlcoholic, stock FROM DRINK ORDER BY name";
+                string query = @"SELECT drink_id, [name], isAlcoholic, stock
+                                 FROM DRINK
+                                 ORDER BY [name]";
                 SqlCommand command = new SqlCommand(query, connection);
 
                 command.Connection.Open();
@@ -37,10 +39,12 @@ namespace ProjectDatabases.Repositories
             Drink? drink = null;
             using (SqlConnection connection = new SqlConnection(_connectionString))
             {
-                string query = "SELECT drink_id, name, isAlcoholic, stock FROM DRINK WHERE drink_id = @drinkId";
+                string query = @"SELECT drink_id, [name], isAlcoholic, stock
+                                 FROM DRINK
+                                 WHERE drink_id = @DrinkId";
 
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@drinkId", id);
+                command.Parameters.AddWithValue("@DrinkId", id);
 
                 connection.Open();
 

@@ -15,13 +15,13 @@ namespace ProjectDatabases.Repositories
 			using (SqlConnection connection = new SqlConnection(_connectionString))
 			{
 				string query = @"INSERT INTO Room (room_number, capacity, type)
-								 VALUES (@room_number, @capacity, @type);
+								 VALUES (@RoomNumber, @Capacity, @Type);
 								 SELECT SCOPE_IDENTITY();";
 				SqlCommand command = new SqlCommand(query, connection);
 
-				command.Parameters.AddWithValue("@room_number", room.RoomNumber);
-				command.Parameters.AddWithValue("@capacity", room.Capacity);
-				command.Parameters.AddWithValue("@type", room.Type);
+				command.Parameters.AddWithValue("@RoomNumber", room.RoomNumber);
+				command.Parameters.AddWithValue("@Capacity", room.Capacity);
+				command.Parameters.AddWithValue("@Type", room.Type);
 
 				command.Connection.Open();
 
@@ -33,14 +33,15 @@ namespace ProjectDatabases.Repositories
 		{
 			using (SqlConnection connection = new SqlConnection(_connectionString))
 			{
-				string query = $"DELETE FROM Room WHERE room_id = @room_id";
+				string query = @"DELETE FROM Room
+								 WHERE room_id = @RoomId";
 				SqlCommand command  = new SqlCommand(query , connection);
-				command.Parameters.AddWithValue("@room_id", room.RoomID);
+				command.Parameters.AddWithValue("@RoomId", room.RoomID);
 
 				command.Connection.Open();
 				int nrOfRowsAffected = command.ExecuteNonQuery();
 				if (nrOfRowsAffected == 0) 
-					throw new Exception("No Records Deleted");
+					throw new Exception("No records deleted.");
 			}
 		}
 
@@ -50,7 +51,9 @@ namespace ProjectDatabases.Repositories
 
 			using (SqlConnection connection = new SqlConnection(_connectionString))
 			{
-				string query = "SELECT room_id, room_number, capacity, type FROM Room ORDER BY room_number";
+				string query = @"SELECT room_id, room_number, capacity, type
+								 FROM Room
+								 ORDER BY room_number";
 				SqlCommand command = new SqlCommand(query, connection);
 
 				connection.Open();
@@ -71,10 +74,11 @@ namespace ProjectDatabases.Repositories
 			Room? room = null;
 			using (SqlConnection connection = new SqlConnection(_connectionString))
 			{
-				string query = "SELECT room_id, room_number, capacity, type FROM Room WHERE room_id = @room_id";
+				string query = @"SELECT room_id, room_number, capacity, type
+								 FROM Room WHERE room_id = @RoomId";
 
 				SqlCommand command = new SqlCommand(query, connection);
-				command.Parameters.AddWithValue("@room_id", roomId);
+				command.Parameters.AddWithValue("@RoomId", roomId);
 
 
 				connection.Open();
@@ -92,20 +96,21 @@ namespace ProjectDatabases.Repositories
 		{
 			using (SqlConnection connection = new SqlConnection(_connectionString))
 			{
-				string query = "UPDATE Room SET room_number = @room_number, capacity = @capacity," +
-								"type = @type WHERE room_id = @room_id";
+				string query = @"UPDATE Room
+								 SET room_number = @RoomNumber, capacity = @Capacity, type = @Type
+								 WHERE room_id = @RoomId";
 				SqlCommand command = new SqlCommand(query, connection);
 
-				command.Parameters.AddWithValue("@room_id", room.RoomID);
-				command.Parameters.AddWithValue("@room_number", room.RoomNumber);
-				command.Parameters.AddWithValue("@capacity", room.Capacity);
-				command.Parameters.AddWithValue("@type", room.Type);
+				command.Parameters.AddWithValue("@RoomId", room.RoomID);
+				command.Parameters.AddWithValue("@RoomNumber", room.RoomNumber);
+				command.Parameters.AddWithValue("@Capacity", room.Capacity);
+				command.Parameters.AddWithValue("@Type", room.Type);
 
 				connection.Open();
 				int nrOfRowsAffected = command.ExecuteNonQuery();
 				if (nrOfRowsAffected == 0)
 				{
-					throw new Exception("No records updated");
+					throw new Exception("No records updated.");
 				}
 			}
 		}

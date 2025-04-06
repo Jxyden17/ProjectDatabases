@@ -47,7 +47,6 @@ namespace ProjectDatabases.Controllers
         {
             try
             {
-
                 _teacherRepository.Add(teacher);
                 return RedirectToAction("Index");
             }
@@ -94,11 +93,11 @@ namespace ProjectDatabases.Controllers
 
 
         [HttpPost]
-        public ActionResult Delete(int TeacherId)
+        public ActionResult Delete(int teacherId)
         {
             try
             {
-                _teacherRepository.Delete(TeacherId);
+                _teacherRepository.Delete(teacherId);
                 return RedirectToAction("Index");
             }
             catch (Exception ex)

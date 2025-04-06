@@ -117,19 +117,6 @@ namespace ProjectDatabases.Repositories
             return activity;
         }
 
-        //public Activity? GetActivityWithSupervisors(int activityId)
-        //{
-        //    Activity? activity = null;
-        //    List<Teacher> supervisors = new();
-        //    List <Teacher> nonSupervisors = new();
-
-        //    using (SqlConnection connection = new SqlConnection(_connectionString))
-        //    {
-        //        string query = @"SELECT "
-        //    }
-
-        //}
-
         public void Add(Activity activity)
         {
             // 1. Create an SQL connection with a connection string
