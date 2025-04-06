@@ -161,7 +161,75 @@ namespace ProjectDatabases.Repositories
             }
         }
 
-        public List<Student> GetAssignedStudents(int roomId)
+		public List<Student> GetParticipants(int activityId)
+		{
+			List<Student> students = new();
+
+			//1. Create an SQL connection with a connection string
+			using (SqlConnection connection = new(_connectionString))
+			{
+				// 2. Create an SQL command with a query
+				string query = @"SELECT S.room_id, S.student_number, S.first_name, S.last_name, S.phone_number, S.class
+                                 FROM Participation AS P
+                                 JOIN Student AS S
+                                     ON P.student_number = S.student_number
+                                 WHERE P.activity_id = @ActivityId
+                                 ORDER BY S.last_name ASC;";
+				SqlCommand command = new(query, connection);
+
+				command.Parameters.AddWithValue("@ActivityId", activityId);
+
+				// 3. Open the SQL connection
+				command.Connection.Open();
+
+				// 4. Execute SQL command
+				SqlDataReader reader = command.ExecuteReader();
+
+				while (reader.Read())
+				{
+					Student student = ReadStudent(reader);
+					students.Add(student);
+				}
+				reader.Close();
+			}
+			return students;
+		}
+
+		public List<Student> GetNonParticipants(int activityId)
+		{
+			List<Student> students = new();
+
+			//1. Create an SQL connection with a connection string
+			using (SqlConnection connection = new(_connectionString))
+			{
+				// 2. Create an SQL command with a query
+				string query = @"SELECT S.room_id, S.student_number, S.first_name, S.last_name, S.phone_number, S.class
+                                 FROM Student AS S
+                                 LEFT JOIN Participation AS P
+                                     ON S.student_number = P.student_number AND P.activity_id = @ActivityId
+                                 WHERE P.student_number IS NULL
+                                 ORDER BY S.last_name ASC;";
+				SqlCommand command = new(query, connection);
+
+				command.Parameters.AddWithValue("@ActivityId", activityId);
+
+				// 3. Open the SQL connection
+				command.Connection.Open();
+
+				// 4. Execute SQL command
+				SqlDataReader reader = command.ExecuteReader();
+
+				while (reader.Read())
+				{
+					Student student = ReadStudent(reader);
+					students.Add(student);
+				}
+				reader.Close();
+			}
+			return students;
+		}
+
+		public List<Student> GetAssignedStudents(int roomId)
         {
 			List<Student> students = new List<Student>();
 

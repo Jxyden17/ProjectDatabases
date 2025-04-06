@@ -98,13 +98,18 @@ namespace ProjectDatabases.Controllers
 			}
 		}
 
-		public IActionResult DormitoryStudents(int roomId)
+		public IActionResult DormitoryStudents(int? Id)
 		{
-			DormitoryStudentsViewModel viewModel = new DormitoryStudentsViewModel();
-			viewModel.Room = _roomRepository.GetById(roomId);
+			Room? Room = _roomRepository.GetById((int)Id);
+			List<Student>AssignedStudents = _studentRepository.GetAssignedStudents((int)Id);
+			List<Student>UnassignedStudents = _studentRepository.GetUnassignedStudents((int)Id);
 
-			viewModel.AssignedStudents= _studentRepository.GetAssignedStudents(roomId);
-			viewModel.UnassignedStudents = _studentRepository.GetUnassignedStudents(roomId);
+			var viewModel = new DormitoryStudentsViewModel()
+			{
+				Room = Room,
+				AssignedStudents = AssignedStudents,
+				UnassignedStudents = UnassignedStudents
+			};
 
 			return View(viewModel);
 		}
@@ -118,12 +123,12 @@ namespace ProjectDatabases.Controllers
 				Student? student = _studentRepository.GetById(studentNumber);
 				_studentRepository.AddStudentToDormitory(studentNumber, roomId);
 				TempData["Confirmation"] = $"{student.FirstName} {student.LastName} has been added to the dormitory";
-				return RedirectToAction("DormitoryStudents", new { roomId });
+				return RedirectToAction("DormitoryStudents", new { id = roomId });
 			}
 			catch (Exception ex)
 			{
 				ViewData["Error"] = ex.Message;
-				return RedirectToAction("DormitoryStudents", new { roomId });
+				return RedirectToAction("DormitoryStudents", new { id = roomId });
 			}
 		}
 
